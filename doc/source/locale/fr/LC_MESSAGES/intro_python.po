@@ -1,0 +1,44 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-06 15:16+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/intro_python.rst:4
+msgid "Introduction à Python"
+msgstr ""
+
+#: ../../source/intro_python.rst:7
+msgid ""
+"Parmi les introductions à `Python`_ disponibles sur le web, on peut "
+"consulter :"
+msgstr ""
+
+#: ../../source/intro_python.rst:9
+msgid ""
+"Le tutoriel de la documentation officielle : "
+"`<http://www.afpy.org/doc/python/2.7/tutorial/>`_"
+msgstr ""
+
+#: ../../source/intro_python.rst:10
+msgid "Python pour lycéens : `<http://python.lycee.free.fr>`_"
+msgstr ""
+
+#: ../../source/intro_python.rst:11
+msgid ""
+"Un tutoriel en vidéo : `<https://www.youtube.com/watch?v=FPfzGFYuOLU>`_"
+msgstr ""
+
+#: ../../source/intro_python.rst:14
+msgid "et bien d'autres..."
+msgstr ""
+
+#~ msgid "A very short introduction to Python"
+#~ msgstr "Introduction à Python"

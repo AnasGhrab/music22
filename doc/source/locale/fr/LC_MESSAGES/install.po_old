@@ -1,0 +1,30 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-06 15:16+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/install.rst:2
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../source/install.rst:4
+msgid ""
+"First, you need to install manually **Essentia** (http://essentia.upf.edu/)."
+msgstr ""
+"Pour analyser les fichiers audios, vous avez besoin d'analyser manuellement le package **Essentia** (http://essentia.upf.edu/)."
+
+#: ../../source/install.rst:6
+msgid "Then, install Diastema with the following :"
+msgstr "Vous pouvez ensuite installer Music22 comme suit :"
+
+#: ../../source/install.rst:12
+msgid "Or :"
+msgstr "Ou :"

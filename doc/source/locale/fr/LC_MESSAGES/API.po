@@ -1,0 +1,59 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-06 15:16+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../<autosummary>:1
+msgid ":obj:`music22 <music22>`\\"
+msgstr ""
+
+#: ../../<autosummary>:1
+msgid "Music22"
+msgstr ""
+
+#: ../../<autosummary>:1
+msgid ":obj:`music22.core <music22.core>`\\"
+msgstr ""
+
+#: ../../<autosummary>:1
+msgid "Core : Functions useful for all the package."
+msgstr ""
+
+#: ../../<autosummary>:1
+msgid ":obj:`music22.diastema <music22.diastema>`\\"
+msgstr ""
+
+#: ../../<autosummary>:1
+msgid "Diastema : Core operations on intervals."
+msgstr ""
+
+#: ../../<autosummary>:1
+msgid ":obj:`music22.scale <music22.scale>`\\"
+msgstr ""
+
+#: ../../<autosummary>:1
+msgid "Scale : Analyse the scale of a melody."
+msgstr ""
+
+#: ../../<autosummary>:1
+msgid ":obj:`music22.modalis <music22.modalis>`\\"
+msgstr ""
+
+#: ../../<autosummary>:1
+msgid "Modalis: Basics of Modality"
+msgstr ""
+
+#: ../../source/API.rst:2
+msgid "API Reference"
+msgstr ""
+
+#~ msgid "Summary of modules"
+#~ msgstr ""

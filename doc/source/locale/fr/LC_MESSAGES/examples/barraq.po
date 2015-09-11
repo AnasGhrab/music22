@@ -1,0 +1,331 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-06 15:16+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/examples/barraq.rst:3
+msgid "*Qaṣīda/Ibtihāl* par ʿAlī al-Barrāq (1891-1981, Kairouan)"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:317
+msgid "Analyse de la première phrase"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:51
+msgid "Écoute de la totalité de l'enregistrement segmenté en six phrases"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:405
+msgid "Dessiner la courbe mélodique"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:435
+msgid "Les valeurs de la PDF sont stockées dans l'attribut *barraq.pdf*"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:438
+msgid "Obtenir l'échelle"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:533
+msgid "Analyse et comparaison d'un ensemble de mélodies"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:320 ../../source/examples/barraq.rst:536
+msgid "Création de l'instance"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:595
+msgid "Affichage des courbes PDF-s"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:597
+msgid "Afficher toutes les courbes PDF-s avec la méthode *.pdf\\_show()* :"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:609
+msgid "Obtenir l'échelle d'une mélodie"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:611
+msgid "On peut obtenir l'échelle d'une phrase en indiquant son numéro :"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:632
+msgid "Dessiner une ligne mélodie avec l'échelle calculée"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:634
+msgid "et afficher sa courbe mélodique :"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:646
+msgid "Matrice des distances / classement hiérarchique"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:648
+msgid ""
+"La méthode *.matrix()* donne la matice des similarités et le classement "
+"hiérarchique :"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:5
+msgid ""
+"*Les commandes ci-dessous sont une introduction à l'utilisation pratique du "
+"package Music22 (v. 0.0.2). Il s'adresse à des utilisateurs sans "
+"connaissance préalable de la programmation, mais qui ont pris connaissance "
+"des premières étapes de l'utilisation de Python et on installé le package "
+"Music22.*"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:11
+msgid ""
+"*L'explication musicologique et les commentaires liées à cette méthode "
+"d'analyse ont été présentés lors de la rencontre sur les maqām-s et ṭubūʿ-s "
+"qui a eu lieu à l'université du Kaslik (Liban) le 19 juillet 2015. Le texte "
+"de la présentation (en arabe) est en cours de publication.*"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:17
+msgid ""
+"On se propose d'analyser un poème soufi (*qaṣidā : ʿomrī ʿalayka tašawwuqan "
+"qaḍḍaytuhu*), interprété par ʿAlī al-Barrāq. Son fichier sonore P0.wav se "
+"trouve dans le dossier ayant pour chemin (*path*) /Users/anas/AUDIO/Barraq/."
+" il est segmenté en six fichiers (P1.wav-P6.wav) placés également dans le "
+"même dossier."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:23
+msgid "Nous procédons comme suit :"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:25
+msgid "Commandes préliminaires"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:26
+msgid "Écoute des des phrases segmentées"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:27
+msgid "Commandes pour l'analyse d'une seule mélodie (la première phrase)"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:28
+msgid ""
+"Commandes pour l'analyse et la comparaison de plusieurs phrases (les six "
+"phrases qui composent l'extrait)"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:32
+msgid "Importation du module *modalis*"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:38
+msgid ""
+"Le commandes suivantes ne sont nécessaires que lors de l'utilisation d'un "
+"notebook IPython/Jupyter (https://jupyter.org/)"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:53
+msgid ""
+"La segmentation du fichier a été réalisée manuellement (avec un logiciel "
+"d'édition sonore) en six phrases :"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:68
+msgid ""
+"عُمْرِي عَلَيْكَ تَشَـوُّقًا قَضَّيْتُهُ وَعَزِيزُ صَبْرِي فِي هَوَاكَ "
+"أَهَنْتُهُ"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:113 ../../source/examples/barraq.rst:156
+msgid ""
+"وَجَعَلْتُ أَبْذُلُ فِيكَ دُرَّ مَدَامِعِي حَتَّى افْتَقَرْتُ إِلَى "
+"العَقِيقِ بَذَلْتُهُ"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:199
+msgid ""
+"قَـلْبِي الذِي لَا زَالَ فِيكَ مُتَيَّمًا لَوْ كَانَ يُنْزَعُ بِاليَمِينِ "
+"لَنَزَعْتُهُ"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:242
+msgid ""
+"قَـلْبِي الذِي لَا زَالَ فِيكَ مُتَيَّمًا لَوْ كَانَ يُنْزَعُ بِاليَمِينِ "
+"لَنَزَعْتُهُ (بذلته)"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:285
+msgid ""
+"لَوْ كُنْتَ تَنْهَانِي عَنِ المَاءِ الذِي فِيهِ حَيَاةُ النَّفْسِ مَا "
+"سَوَّغْتُهُ"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:322
+msgid ""
+"On procèdera premièrement par la création d'une instance (« objet ») que "
+"nous nommons *barraq*. La création de l'instance se fait en indiquant le "
+"*path* du fichier à la classe *melodia* du module *modalis* du package "
+"*music22*."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:339
+msgid ""
+"La création de l'instance analyse systématiquement les fréquences "
+"fondamentales (voir la section analyse des fréquences fondamentales f0) et "
+"les enregistre dans un fichier .txt."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:344
+msgid "Paramètres mélodiques principaux"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:346
+msgid ""
+"Avec la création de l'instance, certaines données sont automatiques "
+"analysées. On peut les obtenir en faisant appels aux attributs de l'instance"
+" :"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:402
+msgid "Pour plus de détails concernant l'analyse de la tonique, voir : ..."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:407
+msgid ""
+"Pour afficher la courbe mélodique, on peut utilise la méthode .plot(). La "
+"tonique détectée est automatiquement affichée. On peut juger visuellement de"
+" la pertinance de la tonique détectée."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:421
+msgid ""
+"Calculer et afficher la courbe PDF (Probability Density Function) avec ses "
+"pics"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:423
+msgid ""
+"Pour afficher les fréquences les plus probables, on utilise la méthode "
+"*.pdf\\_show()*."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:440
+msgid "Les données de l'échelle sont stockées dans l'attribut *.scale*."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:459
+msgid ""
+"Les fréquences sont indiquées par ordre d'importance (première colonne). "
+"Ensuite sont indiquées : 1. les intervalles que forment ces fréquences avec "
+"la tonique détectée (par défaut, en savart); 2. les intervalles épimoriques "
+"les plus proches de cet intervalles, 3. sont-ils plus grand ou plus petit "
+"que l'intervalle épimorique le plus proche ?; 4. La distance qui les sépare "
+"(par défaut, en savart)."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:466
+msgid ""
+"Par exemple, dans cette phrase, la fréquence la plus *probable* est la "
+"fréquence 243 Hz. Elle forme avec la tonique l'intervalle 165.15 savarts. "
+"Cet intervalle est plus petit que l'intervalle épimorique le plus proche 3/2"
+" de 10.94 savarts."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:471
+msgid ""
+"On peut obtenir les intervalles en *cent*. Il suffit de modifier l'unité de "
+"mesure en faisant appel au module *diastema* :"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:485
+msgid ""
+"Puis calculer l'échelle de nouveau avec la méthode *get\\_scale()*, avant "
+"d'appeler l'attribut *.scale*"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:506
+msgid ""
+"(BUG à corriger : en *cent* les signes + et moins - ne sont pas pris en "
+"considération)."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:510
+msgid "Dessiner la courbe mélodique en intégrant les intervalles calculés"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:512
+msgid ""
+"Pour dessiner la courbe mélodique en prenant en considération le calcule des"
+" pics intervalliques et l'échelle, il suffit de fait de nouveau appel à la "
+"méthode *.plot()* en indiquant l'argument *peaks=\"Yes\"* :"
+msgstr ""
+
+#: ../../source/examples/barraq.rst:538
+msgid ""
+"La gestion de plusieurs mélodies/phrases s'effectue à travers la classe "
+"*melodies* du module *modalis*."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:591
+msgid ""
+"Les fichiers contenant les fréquences fondamentales (.txt) sont stockés dans"
+" un dossier f0 créé dans le dossier principal."
+msgstr ""
+
+#: ../../source/examples/barraq.rst:660
+msgid ""
+"On peut lire que la phrase P3 est la plus éloignée des autres phrases et "
+"plus particulièrement de la phrase P4. La phrase qui contient les "
+"caractétistiques proches de l'ensemble du fichier (P0) est la phrase P2."
+msgstr ""
+
+#~ msgid "Écoute de la totalité de l'enregistrement et des phrases segmentées"
+#~ msgstr ""
+
+#~ msgid "Analyse et comparaison de toutes les phrases"
+#~ msgstr ""
+
+#~ msgid "On peut le segmenter manuellement en six phrases :"
+#~ msgstr ""
+
+#~ msgid "عمرى عليك تشـوقا قضـيته وعزيز صبرى فى هواك أهنته"
+#~ msgstr ""
+
+#~ msgid "وجـعلت أبذل فيك در مدامعي حتى افتقرت إلى العقيق بذلته"
+#~ msgstr ""
+
+#~ msgid "قـلبي الذي لا زال فيك متيما لـو كـان ينزع باليمين لنزعته"
+#~ msgstr ""
+
+#~ msgid "قـلبي الذي لا زال فيك متيما لـو كـان ينزع باليمين لنزعته (بذلته)"
+#~ msgstr ""
+
+#~ msgid "لو كنت تنهاني عن الماء الذي فـيـه حياة النفس ما سوغته"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Création d'une instance pour le fichier audio (un objet où seront stockée "
+#~ "les informations) à partir du \\_path\\_du fichier"
+#~ msgstr ""
+
+#~ msgid "Calculer la courbe PDF (Probability Density Function) avec ses pics"
+#~ msgstr ""
+
+#~ msgid "Dessiner le courbe en intégrant les intervalles calculés"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "La gestion de plusieurs mélodies/phrases s'effectue à travers la classe "
+#~ "*melodies* du module *modalis* :"
+#~ msgstr ""

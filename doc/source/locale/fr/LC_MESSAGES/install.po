@@ -1,0 +1,37 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-06 15:16+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/install.rst:2
+msgid "Installation"
+msgstr ""
+
+#: ../../source/install.rst:4
+msgid ""
+"If you begin with Python, look first at the :ref:`Intro section "
+"<intro_python>`."
+msgstr "Si vous débutez avec Python, consultez premièrement la section :ref:`Introduction à Python "
+"<intro_python>`."
+
+#: ../../source/install.rst:6
+msgid ""
+"To use Music22, you need to manually install `Essentia`_. `In futur "
+"versions, it will be also possible to use` `TimeSide`_."
+msgstr "Pour utiliser Music22, il est nécessaire d'installer manuellement `Essentia`_. `Prochainement, il sera aussi possible d'utiliser` `TimeSide`_. "
+
+#: ../../source/install.rst:8
+msgid "Then, install Music22 with the following :"
+msgstr "Ensuite, le plus simple est d'installer Music22 avec la commande ``pip`` :"
+
+#: ../../source/install.rst:14
+msgid "Or using ``git``:"
+msgstr "Il est possible aussi d'utiliser le dépôt ``git``:"

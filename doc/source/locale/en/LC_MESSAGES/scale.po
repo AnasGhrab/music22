@@ -1,0 +1,168 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-06 15:16+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale:2
+msgid "Scale : Analyse the scale of a melody."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale:4
+msgid "This module provides function to analyse the scale of a melody."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale:6
+msgid "Evaluate the PDF of the frequencies"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale:7
+msgid "Get Peaks of the main frequencies"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale:8
+msgid "Plots the PDF and the Peaks"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale:9
+msgid "Gives the scale and compare intervals to reference epimoric intervals"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.kde:1
+msgid "Estimate the pdf of the freqs using a Kernel Density Estimation."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.kde:3
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.peaks:3
+msgid "The estimation is done on the frequencies (0,500)."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.kde:5
+msgid "A list of frequencies in Hz."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.kde:9
+msgid "**pdf** -- the pdf function of freqs."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.kde:22
+msgid "Exemple:"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.order_peaks:1
+msgid "Orders the peaks following their probability"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.order_peaks:3
+msgid "list of peaks (Hz.)"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.order_peaks:5
+msgid "probability of the peaks"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.order_peaks:8
+msgid "**ordredpeaks** -- a table with ordered frequencies"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.pdf_show:1
+msgid "Plot the PDF and the peaks of the frequencies."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.pdf_show:3
+msgid "the PDF of the frequencies given by kde()"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.pdf_show:5
+msgid "frequencies of the peaks, given by peaks()"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.pdf_show:7
+msgid "pdf values of the peaks, given by peaks()"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.pdf_show:9
+msgid "label to give to the figure (`optional`)"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.pdf_show:13
+msgid "Returns :"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.pdf_show:14
+msgid "A plot"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.peaks:1
+msgid "Get the peaks of the estimated Probability Density Function."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.peaks:5
+msgid "the probability of the frequencies in the range 0-500 Hz."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.peaks:8
+msgid ""
+"**xpeaks** -- the peaks frequencies. ypeaks (numpy.array) : the probability "
+"of the peaks."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.set_bw_method:1
+msgid "Set the bw_method for gaussian.kde."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.set_bw_method:3
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.set_xrange:4
+msgid "Args :"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.set_bw_method:4
+msgid "bw_method (str or scalar) : 'scott' (default), 'silvermann'"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.set_xrange:1
+msgid "Set the limits of x for plots and pdfs."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/scale.pydocstring
+#: of music22.scale.set_xrange:4
+msgid "xmin (int): x-minimum xmax (int): x-maximum"
+msgstr ""

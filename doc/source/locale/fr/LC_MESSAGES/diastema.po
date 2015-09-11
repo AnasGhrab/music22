@@ -1,0 +1,115 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-06 15:16+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/diastema.rst:5
+msgid "Diastema API"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema:2
+msgid "Diastema : Core operations on intervals."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema:4
+msgid ""
+"This module defines functions for basic operations on intervals, i. e. "
+"`conversions` from logarithmic into linear spaces, a list of reference "
+"`epimoric intervals` and a function for setting the `unit` be used."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema:6
+msgid ""
+"You can also get the closest `epimoric reference` interval to an interval in"
+" the current unit, and the difference. If we are using the savart units :"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.cent:1
+msgid "Convert the given interval (as ratio) to cent."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.convert_ref:1
+msgid ""
+"Convert all the reference intervals (given by get_intervals()) from ratios "
+"to a linear space."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.dias:1
+msgid ""
+"Convert the given interval (as ratio) to the global chosen unit. Default is "
+"savart."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_inter_ref:1
+msgid "Look for the closest epimoric interval."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_inter_ref:3
+msgid "an interval in savart/cent."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_inter_ref:7
+msgid "**y** -- the closest interval from the reference intervals."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_inter_ref:13
+msgid "Example"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_intervals:1
+msgid "Prints de list of all available reference intervals."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_scale:1
+msgid "Compare given intervals to reference intervals."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_scale:3
+msgid "a list containing intervals in a linear scale."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_scale:7
+msgid "Prints a list of tuples"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_scale:12
+msgid "Example :"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.get_unit:1
+msgid "Get the currently used unit."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.savart:1
+msgid "Convert the given interval (as ratio) to savart."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/diastema.pydocstring
+#: of music22.diastema.set_unit:1
+msgid "Set the unit to be used : possible units are savart and cent."
+msgstr ""

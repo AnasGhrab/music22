@@ -1,0 +1,58 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-06 15:16+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/index.rst:2
+msgid "Welcome to Music22's documentation!"
+msgstr "Documentation du package Music22 !"
+
+#: ../../source/index.rst:4
+msgid "|version|"
+msgstr "|version|"
+
+#: ../../source/index.rst:5
+msgid "|today|"
+msgstr "|today|"
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/__init__.pydocstring
+#: of music22:2
+msgid "Music22"
+msgstr "Music22"
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/__init__.pydocstring
+#: of music22:4
+msgid ""
+"Music22 is a Python package for musicological analysis, especially modal "
+"music and melodies. The analysis is done from audio file. To make analysis "
+"from symbolic data, you can use http://web.mit.edu/music21/."
+msgstr ""
+"Music22 est un package écrit en `Python`_ pour l'analyse musicologique, "
+"plus particulièrement l'analyse de la musique modale et mélodique. "
+"L'analyse est effectuée à partir d'enregistrement audio. Pour des analyses "
+"à partir de données symboliques vous pouvez utiliser le package "
+"http://web.mit.edu/music21/."
+
+#: ../../source/index.rst:18
+msgid "Indices and tables"
+msgstr "Index et tables"
+
+#: ../../source/index.rst:20
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../source/index.rst:21
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../../source/index.rst:22
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
