@@ -43,9 +43,9 @@ To use Music22 :
 
 .. code:: python
 
-    from music22 import modalis,scale
+	from music22 import modalis,scale
 	path = "path/to/a/folder/with/audios/wav/files/"
-    Kchants = modalis.melodies(path,transpose='Yes',freqref=300)
+	Kchants = modalis.melodies(path,transpose='Yes',freqref=300)
 	
 Then you can
 
