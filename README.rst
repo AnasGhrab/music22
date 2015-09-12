@@ -1,5 +1,5 @@
 =================================================
-Music22: Modal Musical Analysis
+Music22: Modal Music Analysis
 =================================================
 
 Overview
