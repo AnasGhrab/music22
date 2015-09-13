@@ -55,9 +55,9 @@ Then you can
 	Kchants.matrix()
 	Kchants.melodies[0].scale
 		
-For more details, please got to the tutorial (in french) :
+For more details, please read to the tutorial (in french) :
 
-https://github.com/AnasGhrab/music22/blob/master/docs/source/examples/barraq.ipynb
+http://nbviewer.ipython.org/github/AnasGhrab/music22/blob/master/docs/source/examples/barraq.ipynb
 
 Contact
 =======
