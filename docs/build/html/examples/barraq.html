@@ -89,7 +89,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Création de l&#8217;instance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
@@ -139,8 +139,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/examples/barraq.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
   </ul>
@@ -151,16 +149,16 @@
   <div class="section" id="qasida-ibtihal-par-ali-al-barraq-1891-1981-kairouan">
 <h1><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)<a class="headerlink" href="#qasida-ibtihal-par-ali-al-barraq-1891-1981-kairouan" title="Lien permanent vers ce titre">¶</a></h1>
 <p><em>Les commandes ci-dessous sont une introduction à l&#8217;utilisation pratique
-du package Music22 (v. 0.0.2). Il s&#8217;adresse à des utilisateurs sans
+du package</em> <a class="reference internal" href="../index.html#intro"><span>Music22</span></a>. <em>Il s&#8217;adresse à des utilisateurs sans
 connaissance préalable de la programmation, mais qui ont pris
-connaissance des :ref:`premières étapes de l&#8217;utilisation de Python &lt;intro_python&gt;` et ont :ref:`installé le package Music22 &lt;install&gt;`.</em></p>
-<p><em>L&#8217;explication musicologique et les commentaires liées à cette méthode
+connaissance des</em> <a class="reference internal" href="../intro_python.html#intro-python"><span>premières étapes de l&#8217;utilisation de Python</span></a> <em>et ont</em> <a class="reference internal" href="../install.html#install"><span>installé le package Music22</span></a>.</p>
+<p><em>L&#8217;explication musicologique et les commentaires liés à cette méthode
 d&#8217;analyse ont été présentés lors de la rencontre sur les maqām-s et
 ṭubūʿ-s qui a eu lieu à l&#8217;université du Kaslik (Liban) le 19 juillet
 2015. Le texte de la présentation (en arabe) est en cours de
 publication.</em></p>
-<p>L&#8217;enregistrement a été publié dans le premier volume de l&#8217;Initiation à
-la Musique Tunisienne (Snoussi, 1963/R-2003).</p>
+<p><em>L&#8217;enregistrement utilisé ici fait partie du premier volume de l&#8217;Initiation à
+la Musique Tunisienne</em> (<a class="reference external" href="http://www.cmam.tn/publication/fr/5/Initiation-a-la-Musique-Tunisienne.html?iframe=true&amp;width=80%&amp;height=100%">Snoussi, 1963/R-2003</a>).</p>
 <!--
 @book{snoussi_initiation_2003,
     title = {Initiation a la musique tunisienne: {Musique} classique},
@@ -172,11 +170,16 @@ la Musique Tunisienne (Snoussi, 1963/R-2003).</p>
     keywords = {Tunisie, Musique, CMAM, Snoussi}
 }
 --><hr class="docutils" />
-<p>On se propose d&#8217;analyser un poème soufi (<em>qaṣidā : ʿomrī ʿalayka
-tašawwuqan qaḍḍaytuhu</em>), interprété par ʿAlī al-Barrāq. Son fichier
-sonore P0.wav se trouve dans le dossier ayant pour chemin (<em>path</em>)
-/Users/anas/AUDIO/Barraq/. il est segmenté en six fichiers
-(P1.wav-P6.wav) placés également dans le même dossier.</p>
+<p>On se propose d&#8217;analyser un chant soufi interprété par ʿAlī al-Barrāq <a class="footnote-reference" href="#id2" id="id1">[1]</a> . Son fichier
+sonore <code class="docutils literal"><span class="pre">P0.wav</span></code> se trouve dans le dossier ayant pour chemin (<em>path</em>)
+<code class="docutils literal"><span class="pre">/Users/anas/AUDIO/Barraq/</span></code>. Il est segmenté en six fichiers
+(<code class="docutils literal"><span class="pre">P1.wav</span></code>-<code class="docutils literal"><span class="pre">P6.wav</span></code>) placés également dans le même dossier.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Il s&#8217;agit d&#8217;une <em>qaṣidā/ibtihāl</em> : <em>ʿomrī ʿalayka tašawwuqan qaḍḍaytuhu</em> (عمري عليك تشوّقا قضّيته).</td></tr>
+</tbody>
+</table>
 <p>Nous procédons comme suit :</p>
 <ul class="simple">
 <li>Commandes préliminaires</li>
@@ -367,8 +370,8 @@ des pics intervalliques et l&#8217;échelle, il suffit de fait de nouveau appel
 </div>
 <div class="section" id="analyse-et-comparaison-d-un-ensemble-de-melodies">
 <h2>Analyse et comparaison d&#8217;un ensemble de mélodies<a class="headerlink" href="#analyse-et-comparaison-d-un-ensemble-de-melodies" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="id1">
-<h3>Création de l&#8217;instance<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="id3">
+<h3>Création de l&#8217;instance<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La gestion de plusieurs mélodies/phrases s&#8217;effectue à travers la classe
 <em>melodies</em> du module <em>modalis</em>.</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/Barraq/&quot;</span>
@@ -486,6 +489,7 @@ caractétistiques proches de l&#8217;ensemble du fichier (P0) est la phrase P2.<
       Mis à jour le Sep 13, 2015.
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
 </footer>
 
