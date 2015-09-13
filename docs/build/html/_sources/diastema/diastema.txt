@@ -1,0 +1,9 @@
+.. automodule:: diastema
+	:member:
+	::undoc-members:
+	:inherited-members:
+
+.. toctree::
+	:maxdepth: 2
+
+	intervals

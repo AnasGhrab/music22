@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Example with one file &mdash; music22 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="music22 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="Tutorial and examples" href="examples.html" />
+    <link rel="next" title="Summary of modules" href="API.html" />
+    <link rel="prev" title="Tutorial and examples" href="examples.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="API.html" title="Summary of modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Tutorial and examples"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">music22 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="examples.html" accesskey="U">Tutorial and examples</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="example-with-one-file">
+<h1>Example with one file<a class="headerlink" href="#example-with-one-file" title="Permalink to this headline">¶</a></h1>
+<div class="code python highlight-python"><div class="highlight"><pre>%matplotlib inline
+import numpy
+from music22 import modalis
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">file_path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/Barraq/txt/P0.txt&quot;</span>
+<span class="n">freqs</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraqp0</span> <span class="o">=</span> <span class="n">modalis</span><span class="o">.</span><span class="n">melodia</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraqp0</span><span class="o">.</span><span class="n">scale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;242.48496994&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;0.00&#39;</span><span class="p">,</span> <span class="s">&#39;1/1&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;0.00&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;200.400801603&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-82.79&#39;</span><span class="p">,</span> <span class="s">&#39;6/5&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;3.60&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;274.549098196&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;53.94&#39;</span><span class="p">,</span> <span class="s">&#39;9/8&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;2.78&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;218.436873747&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-45.36&#39;</span><span class="p">,</span> <span class="s">&#39;10/9&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;0.40&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;162.324649299&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-174.30&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;1.79&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;321.643286573&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;122.69&#39;</span><span class="p">,</span> <span class="s">&#39;4/3&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;2.25&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;296.593186373&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;87.48&#39;</span><span class="p">,</span> <span class="s">&#39;9/8*12/11&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;1.46&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;365.731462926&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;178.48&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;2.39&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;404.809619238&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;222.57&#39;</span><span class="p">,</span> <span class="s">&#39;3/2*10/9&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;0.72&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;434.869739479&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;253.67&#39;</span><span class="p">,</span> <span class="s">&#39;3/2*6/5&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;1.60&#39;</span><span class="p">))]</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraqp0</span><span class="o">.</span><span class="n">pdf_show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/modalis_example_5_0.png" src="_images/modalis_example_5_0.png" />
+</div>
+<div class="section" id="example-with-multiple-files">
+<h1>Example with multiple files<a class="headerlink" href="#example-with-multiple-files" title="Permalink to this headline">¶</a></h1>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/Barraq/txt/&quot;</span>
+<span class="n">Barraq</span> <span class="o">=</span> <span class="n">modalis</span><span class="o">.</span><span class="n">melodies</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Barraq</span><span class="o">.</span><span class="n">pdf_show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/modalis_example_8_0.png" src="_images/modalis_example_8_0.png" />
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Barraq</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">scale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;241.482965932&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;0.00&#39;</span><span class="p">,</span> <span class="s">&#39;1/1&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;0.00&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;201.402805611&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-78.82&#39;</span><span class="p">,</span> <span class="s">&#39;6/5&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;0.36&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;301.603206413&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;96.55&#39;</span><span class="p">,</span> <span class="s">&#39;5/4&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;0.36&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;321.643286573&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;124.49&#39;</span><span class="p">,</span> <span class="s">&#39;4/3&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;0.45&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;279.559118236&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;63.59&#39;</span><span class="p">,</span> <span class="s">&#39;9/8&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;12.43&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;364.729458918&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;179.08&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;2.99&#39;</span><span class="p">))]</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Barraq</span><span class="o">.</span><span class="n">matrix</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/modalis_example_10_0.png" src="_images/modalis_example_10_0.png" />
+</div>
+<div class="section" id="measure-distances">
+<h1>Measure distances<a class="headerlink" href="#measure-distances" title="Permalink to this headline">¶</a></h1>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Barraq</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">metric</span><span class="o">=</span><span class="s">&#39;KL&#39;</span><span class="p">)</span>
+<span class="n">Barraq</span><span class="o">.</span><span class="n">distances</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mf">0.07922494722821323</span><span class="p">,</span>
+ <span class="mf">0.040809814646407108</span><span class="p">,</span>
+ <span class="mf">0.15882207621728223</span><span class="p">,</span>
+ <span class="mf">0.23556335010388174</span><span class="p">,</span>
+ <span class="mf">0.10294061996791626</span><span class="p">,</span>
+ <span class="mf">0.12200073479685059</span><span class="p">,</span>
+ <span class="mf">0.10858769483589574</span><span class="p">,</span>
+ <span class="mf">0.30365921142811697</span><span class="p">,</span>
+ <span class="mf">0.16783854305643292</span><span class="p">,</span>
+ <span class="mf">0.076116215016051203</span><span class="p">,</span>
+ <span class="mf">0.17614504196438158</span><span class="p">,</span>
+ <span class="mf">0.10381292392877692</span><span class="p">,</span>
+ <span class="mf">0.28684106873703452</span><span class="p">,</span>
+ <span class="mf">0.11902241252057461</span><span class="p">,</span>
+ <span class="mf">0.17111800464971663</span><span class="p">,</span>
+ <span class="mf">0.99581318349868098</span><span class="p">,</span>
+ <span class="mf">0.59250711676771672</span><span class="p">,</span>
+ <span class="mf">0.61360221771879797</span><span class="p">,</span>
+ <span class="mf">0.086075614750767387</span><span class="p">,</span>
+ <span class="mf">0.144112187423378</span><span class="p">,</span>
+ <span class="mf">0.10026090297259377</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tests">
+<h1>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h1>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="k">class</span> <span class="nc">TestScale</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_clean_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Is the list clean from zeros ? and NaNs (todo...)&quot;&quot;&quot;</span>
+        <span class="n">L</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">53</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">32</span><span class="p">])</span>
+        <span class="n">Lclear</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">23</span><span class="p">,</span><span class="mi">53</span><span class="p">,</span><span class="mi">32</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertItemsEqual</span><span class="p">(</span><span class="n">Lclear</span><span class="p">,</span><span class="n">clean_list</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">test_pdf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Testing the Propability Density Function&quot;&quot;&quot;</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+        <span class="c">#self.assertEqual(scipy.stats.kde.gaussian_kde,pdf(scipy.stats.kde.gaussian_kde))</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestScale</span><span class="p">)</span>
+<span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>&lt;unittest.runner.TextTestResult run=1 errors=0 failures=0&gt;
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Example with one file</a></li>
+<li><a class="reference internal" href="#example-with-multiple-files">Example with multiple files</a></li>
+<li><a class="reference internal" href="#measure-distances">Measure distances</a></li>
+<li><a class="reference internal" href="#tests">Tests</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="examples.html"
+                        title="previous chapter">Tutorial and examples</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="API.html"
+                        title="next chapter">Summary of modules</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/modalis_example.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="API.html" title="Summary of modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="examples.html" title="Tutorial and examples"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">music22 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="examples.html" >Tutorial and examples</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Anas Ghrab.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

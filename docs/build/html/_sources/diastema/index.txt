@@ -1,0 +1,14 @@
+:mod: `diastema`
+===============
+
+.. automodule:: music22.diastema
+	:members:
+	:undoc-members:
+
+.. autoclass:: intervals
+	:members:
+	:undoc-members:
+
+.. autoclass:: scale
+	:members:
+	:undoc-members:

@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>music22.diastema &mdash; documentation music22 0.0.2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation music22 0.0.2" href="../../index.html"/>
+        <link rel="up" title="Code du module" href="../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> music22
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro_python.html">Introduction à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Tutoriels and exemples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/barraq.html"><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/barraq.html#importation-du-module-modalis">Importation du module <em>modalis</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/barraq.html#ecoute-de-la-totalite-de-l-enregistrement-segmente-en-six-phrases">Écoute de la totalité de l&#8217;enregistrement segmenté en six phrases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/barraq.html#analyse-de-la-premiere-phrase">Analyse de la première phrase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#creation-de-l-instance">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#parametres-melodiques-principaux">Paramètres mélodiques principaux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#dessiner-la-courbe-melodique">Dessiner la courbe mélodique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#calculer-et-afficher-la-courbe-pdf-probability-density-function-avec-ses-pics">Calculer et afficher la courbe PDF (Probability Density Function) avec ses pics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#obtenir-l-echelle">Obtenir l&#8217;échelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">Dessiner la courbe mélodique en intégrant les intervalles calculés</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/barraq.html#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#id1">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#matrice-des-distances-classement-hierarchique">Matrice des distances / classement hiérarchique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/quatre_chants.html">Quatre variantes d&#8217;un chant de femmes du sud-est tunisien</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#ecoute-des-versions">Écoute des versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#analyse-et-affichage-des-pdf-s">Analyse et affichage des PDF-s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#transposition-des-frequences">Transposition des fréquences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#matrice-des-distances-et-groupement-hierarchique">Matrice des distances et groupement hiérarchique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#extraction-des-echelles">Extraction des échelles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../API.html">API Reference</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">music22</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Code du module</a> &raquo;</li>
+      
+    <li>music22.diastema</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Code source de music22.diastema</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Diastema : Core operations on intervals.</span>
+<span class="sd">----------------------------------------</span>
+
+<span class="sd">This module defines functions for basic operations on intervals, i. e. `conversions` from logarithmic into linear spaces, a list of reference `epimoric intervals` and a function for setting the `unit` be used.</span>
+<span class="sd"> </span>
+<span class="sd">You can also get the closest `epimoric reference` interval to an interval in the current unit, and the difference. If we are using the savart units :</span>
+
+<span class="sd">&gt;&gt;&gt; get_inter_ref(300)</span>
+<span class="sd">(&#39;300.00&#39;, &#39;2/1&#39;, &#39;-&#39;, &#39;1.03&#39;)</span>
+<span class="sd">&gt;&gt;&gt; get_inter_ref(303)</span>
+<span class="sd">(&#39;303.00&#39;, &#39;2/1&#39;, &#39;+&#39;, &#39;1.97&#39;)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">log2</span><span class="p">,</span><span class="n">log10</span>
+    
+<span class="n">inter</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;2/1*4/3&#39;</span><span class="p">:</span><span class="mi">2</span><span class="o">/</span><span class="mf">1.</span><span class="o">*</span><span class="mi">4</span><span class="o">/</span><span class="mf">3.</span><span class="p">,</span><span class="s">&#39;2/1*5/4&#39;</span><span class="p">:</span><span class="mi">2</span><span class="o">/</span><span class="mf">1.</span><span class="o">*</span><span class="mi">5</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span><span class="s">&#39;2/1*6/5&#39;</span><span class="p">:</span><span class="mi">2</span><span class="o">/</span><span class="mf">1.</span><span class="o">*</span><span class="mi">6</span><span class="o">/</span><span class="mf">5.</span><span class="p">,</span>
+         <span class="s">&#39;2/1*9/8&#39;</span><span class="p">:</span><span class="mi">2</span><span class="o">/</span><span class="mf">1.</span><span class="o">*</span><span class="mi">9</span><span class="o">/</span><span class="mf">8.</span><span class="p">,</span><span class="s">&#39;2/1*10/9&#39;</span><span class="p">:</span><span class="mi">2</span><span class="o">/</span><span class="mf">1.</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mf">9.</span><span class="p">,</span><span class="s">&#39;2/1*12/11&#39;</span><span class="p">:</span><span class="mi">2</span><span class="o">/</span><span class="mf">1.</span><span class="o">*</span><span class="mi">12</span><span class="o">/</span><span class="mf">11.</span><span class="p">,</span>
+         <span class="s">&#39;2/1&#39;</span><span class="p">:</span><span class="mi">2</span><span class="o">/</span><span class="mf">1.</span><span class="p">,</span><span class="s">&#39;3/2*5/4&#39;</span><span class="p">:</span><span class="mi">3</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span><span class="mi">5</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span><span class="s">&#39;3/2*6/5&#39;</span><span class="p">:</span><span class="mi">3</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span><span class="mi">6</span><span class="o">/</span><span class="mf">5.</span><span class="p">,</span><span class="s">&#39;3/2*9/8&#39;</span><span class="p">:</span><span class="mi">3</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span><span class="mi">9</span><span class="o">/</span><span class="mf">8.</span><span class="p">,</span>
+         <span class="s">&#39;3/2*10/9&#39;</span><span class="p">:</span><span class="mi">3</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span><span class="mi">10</span><span class="o">/</span><span class="mf">9.</span><span class="p">,</span><span class="s">&#39;3/2&#39;</span><span class="p">:</span><span class="mi">3</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span><span class="s">&#39;4/3&#39;</span><span class="p">:</span><span class="mi">4</span><span class="o">/</span><span class="mf">3.</span><span class="p">,</span><span class="s">&#39;5/4&#39;</span><span class="p">:</span><span class="mi">5</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span><span class="s">&#39;9/8*12/11&#39;</span><span class="p">:</span><span class="mi">9</span><span class="o">/</span><span class="mf">8.</span><span class="o">*</span><span class="mi">12</span><span class="o">/</span><span class="mf">11.</span><span class="p">,</span>
+          <span class="s">&#39;6/5&#39;</span><span class="p">:</span><span class="mi">6</span><span class="o">/</span><span class="mf">5.</span><span class="p">,</span><span class="s">&#39;9/8&#39;</span><span class="p">:</span><span class="mi">9</span><span class="o">/</span><span class="mf">8.</span><span class="p">,</span><span class="s">&#39;10/9&#39;</span><span class="p">:</span><span class="mi">10</span><span class="o">/</span><span class="mf">9.</span><span class="p">,</span><span class="s">&#39;12/11&#39;</span><span class="p">:</span><span class="mi">12</span><span class="o">/</span><span class="mf">11.</span><span class="p">,</span><span class="s">&#39;1/1&#39;</span><span class="p">:</span><span class="mi">1</span><span class="o">/</span><span class="mf">1.</span><span class="p">}</span>
+<span class="c">#Int = [] # A list where the method convert_ref() puts converted ratio into a linear space</span>
+<span class="n">unit</span> <span class="o">=</span> <span class="s">&quot;savart&quot;</span> <span class="c"># Sets the default unit to be savart</span>
+        
+<div class="viewcode-block" id="set_unit"><a class="viewcode-back" href="../../diastema.html#music22.diastema.set_unit">[docs]</a><span class="k">def</span> <span class="nf">set_unit</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Set the unit to be used : possible units are savart and cent.</span>
+
+<span class="sd">        &gt;&gt;&gt; set_unit(&quot;savart&quot;)</span>
+<span class="sd">        Unit is now set to : savart</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">unit</span>
+    <span class="n">unit_types</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;savart&quot;</span><span class="p">,</span><span class="s">&quot;cent&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">unit_types</span><span class="p">:</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="n">x</span>
+    	<span class="k">print</span> <span class="s">&quot;Unit is now set to :&quot;</span><span class="p">,</span><span class="n">unit</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;Accepted units : &#39;savart&#39;,&#39;cent&#39;&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="get_intervals"><a class="viewcode-back" href="../../diastema.html#music22.diastema.get_intervals">[docs]</a><span class="k">def</span> <span class="nf">get_intervals</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Prints de list of all available reference intervals.&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">inter</span>
+    <span class="k">print</span> <span class="n">inter</span>
+    </div>
+<div class="viewcode-block" id="get_unit"><a class="viewcode-back" href="../../diastema.html#music22.diastema.get_unit">[docs]</a><span class="k">def</span> <span class="nf">get_unit</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Get the currently used unit.&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">unit</span>
+    <span class="k">print</span> <span class="n">unit</span>
+</div>
+<div class="viewcode-block" id="cent"><a class="viewcode-back" href="../../diastema.html#music22.diastema.cent">[docs]</a><span class="k">def</span> <span class="nf">cent</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert the given interval (as ratio) to cent.</span>
+<span class="sd">    </span>
+<span class="sd">        &gt;&gt;&gt; cent(3/2.)</span>
+<span class="sd">        701.95500086538743</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">inter_cent</span> <span class="o">=</span> <span class="n">log2</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="mi">1200</span>
+    <span class="k">return</span> <span class="n">inter_cent</span>
+</div>
+<div class="viewcode-block" id="savart"><a class="viewcode-back" href="../../diastema.html#music22.diastema.savart">[docs]</a><span class="k">def</span> <span class="nf">savart</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert the given interval (as ratio) to savart.</span>
+<span class="sd">    </span>
+<span class="sd">        &gt;&gt;&gt; savart(3/2.)</span>
+<span class="sd">        176.09125905568123</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">inter_savart</span> <span class="o">=</span> <span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span>
+    <span class="k">return</span> <span class="n">inter_savart</span>
+</div>
+<div class="viewcode-block" id="dias"><a class="viewcode-back" href="../../diastema.html#music22.diastema.dias">[docs]</a><span class="k">def</span> <span class="nf">dias</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert the given interval (as ratio) to the global chosen unit. Default is savart.</span>
+<span class="sd">    </span>
+<span class="sd">        &gt;&gt;&gt; dias(3/2.)</span>
+<span class="sd">        176.09125905568123</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">unit</span>
+    <span class="k">if</span> <span class="n">unit</span><span class="o">==</span><span class="s">&quot;savart&quot;</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">savart</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s">&quot;cent&quot;</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">cent</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+</div>
+<div class="viewcode-block" id="convert_ref"><a class="viewcode-back" href="../../diastema.html#music22.diastema.convert_ref">[docs]</a><span class="k">def</span> <span class="nf">convert_ref</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Convert all the reference intervals (given by get_intervals()) from ratios to a linear space.&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">inter</span>
+    <span class="n">Int</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="n">inter</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">I</span><span class="p">)):</span>
+        <span class="n">Int</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dias</span><span class="p">(</span><span class="n">I</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="c"># Tous les intervalles en savarts</span>
+    <span class="k">return</span> <span class="n">Int</span>
+</div>
+<div class="viewcode-block" id="get_inter_ref"><a class="viewcode-back" href="../../diastema.html#music22.diastema.get_inter_ref">[docs]</a><span class="k">def</span> <span class="nf">get_inter_ref</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Look for the closest epimoric interval.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x (int) : an interval in savart/cent.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        y (tuple) : the closest interval from the reference intervals.</span>
+<span class="sd">        </span>
+<span class="sd">    Example:            </span>
+<span class="sd">        &gt;&gt;&gt; get_inter_ref(300)</span>
+<span class="sd">        (&#39;300.00&#39;, &#39;2/1&#39;, &#39;-&#39;, &#39;1.03&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; get_inter_ref(303)</span>
+<span class="sd">        (&#39;303.00&#39;, &#39;2/1&#39;, &#39;+&#39;, &#39;1.97&#39;)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">inter</span>
+    <span class="n">Int</span> <span class="o">=</span> <span class="n">convert_ref</span><span class="p">()</span> <span class="c"># Converting intervals</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">Int</span><span class="p">)):</span>
+        <span class="n">dist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">Int</span><span class="p">[</span><span class="n">j</span><span class="p">])))</span>
+    <span class="n">Index_Intervalle_Proche</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">dist</span><span class="p">))</span>
+    <span class="n">Nom_Intervalle_Proche</span> <span class="o">=</span> <span class="n">inter</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="n">dist</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">dist</span><span class="p">))]</span>
+    <span class="n">Difference</span> <span class="o">=</span> <span class="s">&quot;{:.2f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">dist</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">log10</span><span class="p">(</span><span class="n">inter</span><span class="o">.</span><span class="n">values</span><span class="p">()[</span><span class="n">dist</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">dist</span><span class="p">))])</span><span class="o">*</span><span class="mi">1000</span><span class="p">:</span>
+        <span class="n">signe</span> <span class="o">=</span> <span class="s">&#39;+&#39;</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">signe</span>  <span class="o">=</span> <span class="s">&#39;-&#39;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;{:.2f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">Nom_Intervalle_Proche</span><span class="p">,</span><span class="n">signe</span><span class="p">,</span> <span class="n">Difference</span>
+    <span class="k">return</span> <span class="n">y</span>
+</div>
+<div class="viewcode-block" id="get_scale"><a class="viewcode-back" href="../../diastema.html#music22.diastema.get_scale">[docs]</a><span class="k">def</span> <span class="nf">get_scale</span><span class="p">(</span><span class="n">echelle</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Compare given intervals to reference intervals.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        echelle (list): a list containing intervals in a linear scale.</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        Prints a list of tuples</span>
+
+<span class="sd">    Example :</span>
+<span class="sd">        &gt;&gt;&gt; a = [125,256,300]</span>
+<span class="sd">        (&#39;125.00&#39;, &#39;4/3&#39;, &#39;+&#39;, &#39;0.06&#39;)</span>
+<span class="sd">        (&#39;256.00&#39;, &#39;3/2*6/5&#39;, &#39;+&#39;, &#39;0.73&#39;)</span>
+<span class="sd">        (&#39;300.00&#39;, &#39;2/1&#39;, &#39;-&#39;, &#39;1.03&#39;)    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">echelle</span><span class="p">)):</span>
+        <span class="k">print</span> <span class="n">get_inter_ref</span><span class="p">(</span><span class="n">echelle</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+</div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">doctest</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Anas Ghrab.
+      Mis à jour le Sep 11, 2015.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

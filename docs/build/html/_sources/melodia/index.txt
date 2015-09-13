@@ -1,0 +1,6 @@
+:mod: `melodia`
+==============
+
+.. automodule:: music22.melodia
+	:members:
+

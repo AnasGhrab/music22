@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Qaṣīda/Ibtihāl par ʿAlī al-Barrāq (1891-1981, Kairouan) &mdash; documentation music22 0.0.2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation music22 0.0.2" href="../index.html"/>
+        <link rel="up" title="Tutoriels and exemples" href="../examples.html"/>
+        <link rel="next" title="Quatre variantes d’un chant de femmes du sud-est tunisien" href="quatre_chants.html"/>
+        <link rel="prev" title="Tutoriels and exemples" href="../examples.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> music22
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro_python.html">Introduction à Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../examples.html">Tutoriels and exemples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href=""><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#importation-du-module-modalis">Importation du module <em>modalis</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ecoute-de-la-totalite-de-l-enregistrement-segmente-en-six-phrases">Écoute de la totalité de l&#8217;enregistrement segmenté en six phrases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analyse-de-la-premiere-phrase">Analyse de la première phrase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creation-de-l-instance">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parametres-melodiques-principaux">Paramètres mélodiques principaux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dessiner-la-courbe-melodique">Dessiner la courbe mélodique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#calculer-et-afficher-la-courbe-pdf-probability-density-function-avec-ses-pics">Calculer et afficher la courbe PDF (Probability Density Function) avec ses pics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#obtenir-l-echelle">Obtenir l&#8217;échelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">Dessiner la courbe mélodique en intégrant les intervalles calculés</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#matrice-des-distances-classement-hierarchique">Matrice des distances / classement hiérarchique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quatre_chants.html">Quatre variantes d&#8217;un chant de femmes du sud-est tunisien</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#ecoute-des-versions">Écoute des versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#analyse-et-affichage-des-pdf-s">Analyse et affichage des PDF-s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#transposition-des-frequences">Transposition des fréquences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#matrice-des-distances-et-groupement-hierarchique">Matrice des distances et groupement hiérarchique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#extraction-des-echelles">Extraction des échelles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">API Reference</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">music22</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../examples.html">Tutoriels and exemples</a> &raquo;</li>
+      
+    <li><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/examples/barraq.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="qasida-ibtihal-par-ali-al-barraq-1891-1981-kairouan">
+<h1><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)<a class="headerlink" href="#qasida-ibtihal-par-ali-al-barraq-1891-1981-kairouan" title="Lien permanent vers ce titre">¶</a></h1>
+<p><em>Les commandes ci-dessous sont une introduction à l&#8217;utilisation pratique
+du package Music22 (v. 0.0.2). Il s&#8217;adresse à des utilisateurs sans
+connaissance préalable de la programmation, mais qui ont pris
+connaissance des premières étapes de l&#8217;utilisation de Python et on
+installé le package Music22.</em></p>
+<p><em>L&#8217;explication musicologique et les commentaires liées à cette méthode
+d&#8217;analyse ont été présentés lors de la rencontre sur les maqām-s et
+ṭubūʿ-s qui a eu lieu à l&#8217;université du Kaslik (Liban) le 19 juillet
+2015. Le texte de la présentation (en arabe) est en cours de
+publication.</em></p>
+<p>L&#8217;enregistrement a été publié dans le premier volume de l&#8217;Initiation à
+la Musique Tunisienne (Snoussi, 1963/R-2003).</p>
+<!--
+@book{snoussi_initiation_2003,
+    title = {Initiation a la musique tunisienne: {Musique} classique},
+    shorttitle = {Initiation a la musique tunisienne},
+    language = {fr},
+    publisher = {Centre des Musiques Arabes et Méditerranéennes Ennejma Ezzahra},
+    author = {Snoussi, Manoubi},
+    year = {2003},
+    keywords = {Tunisie, Musique, CMAM, Snoussi}
+}
+--><hr class="docutils" />
+<p>On se propose d&#8217;analyser un poème soufi (<em>qaṣidā : ʿomrī ʿalayka
+tašawwuqan qaḍḍaytuhu</em>), interprété par ʿAlī al-Barrāq. Son fichier
+sonore P0.wav se trouve dans le dossier ayant pour chemin (<em>path</em>)
+/Users/anas/AUDIO/Barraq/. il est segmenté en six fichiers
+(P1.wav-P6.wav) placés également dans le même dossier.</p>
+<p>Nous procédons comme suit :</p>
+<ul class="simple">
+<li>Commandes préliminaires</li>
+<li>Écoute des des phrases segmentées</li>
+<li>Commandes pour l&#8217;analyse d&#8217;une seule mélodie (la première phrase)</li>
+<li>Commandes pour l&#8217;analyse et la comparaison de plusieurs phrases (les
+six phrases qui composent l&#8217;extrait)</li>
+</ul>
+<div class="section" id="importation-du-module-modalis">
+<h2>Importation du module <em>modalis</em><a class="headerlink" href="#importation-du-module-modalis" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">music22.modalis</span>
+</pre></div>
+</div>
+<p>Le commandes suivantes ne sont nécessaires que lors de l&#8217;utilisation
+d&#8217;un notebook IPython/Jupyter (<a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a>)</p>
+<div class="code python highlight-python"><div class="highlight"><pre># Pour que l&#39;affichage des graphiques s&#39;effectue dans le Notebook.
+%matplotlib inline
+
+# Pour intégrer du code html au notebook.
+# Il nous sert ici à intégrer (avec la balise &lt;iframe&gt;) des fichiers sonores placés dans une base de données sonores Telemeta.
+from IPython.display import HTML
+</pre></div>
+</div>
+</div>
+<div class="section" id="ecoute-de-la-totalite-de-l-enregistrement-segmente-en-six-phrases">
+<h2>Écoute de la totalité de l&#8217;enregistrement segmenté en six phrases<a class="headerlink" href="#ecoute-de-la-totalite-de-l-enregistrement-segmente-en-six-phrases" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La segmentation du fichier a été réalisée manuellement (avec un logiciel
+d&#8217;édition sonore) en six phrases :</p>
+<div dir="rtl"><ul><li><p>عُمْرِي عَلَيْكَ تَشَـوُّقًا قَضَّيْتُهُ وَعَزِيزُ صَبْرِي فِي هَوَاكَ
+أَهَنْتُهُ</p>
+</li></ul></div><div class="code python highlight-python"><div class="highlight"><pre>%%html
+
+&lt;iframe width=&#39;815&#39; height=&#39;300&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; marginheight=&#39;0&#39; marginwidth=&#39;0&#39;
+src=&#39;http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_01/player/800x170&#39;&gt;
+&lt;/iframe&gt;
+</pre></div>
+</div>
+<iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
+src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_01/player/800x170'>
+</iframe><div dir="rtl"><ul><li><p>وَجَعَلْتُ أَبْذُلُ فِيكَ دُرَّ مَدَامِعِي حَتَّى افْتَقَرْتُ إِلَى
+العَقِيقِ بَذَلْتُهُ</p>
+</li></ul></div><div class="code python highlight-python"><div class="highlight"><pre>%%html
+&lt;iframe width=&#39;815&#39; height=&#39;300&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; marginheight=&#39;0&#39; marginwidth=&#39;0&#39;
+src=&#39;http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_02/player/800x170&#39;&gt;
+&lt;/iframe&gt;
+</pre></div>
+</div>
+<iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
+src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_02/player/800x170'>
+</iframe><div dir="rtl"><ul><li><p>وَجَعَلْتُ أَبْذُلُ فِيكَ دُرَّ مَدَامِعِي حَتَّى افْتَقَرْتُ إِلَى
+العَقِيقِ بَذَلْتُهُ</p>
+</li></ul></div><div class="code python highlight-python"><div class="highlight"><pre>%%html
+&lt;iframe width=&#39;815&#39; height=&#39;300&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; marginheight=&#39;0&#39; marginwidth=&#39;0&#39;
+src=&#39;http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_03/player/800x170&#39;&gt;
+&lt;/iframe&gt;
+</pre></div>
+</div>
+<iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
+src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_03/player/800x170'>
+</iframe><div dir="rtl"><ul><li><p>قَـلْبِي الذِي لَا زَالَ فِيكَ مُتَيَّمًا لَوْ كَانَ يُنْزَعُ
+بِاليَمِينِ لَنَزَعْتُهُ</p>
+</li></ul></div><div class="code python highlight-python"><div class="highlight"><pre>%%html
+&lt;iframe width=&#39;815&#39; height=&#39;300&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; marginheight=&#39;0&#39; marginwidth=&#39;0&#39;
+src=&#39;http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_04/player/800x170&#39;&gt;
+&lt;/iframe&gt;
+</pre></div>
+</div>
+<iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
+src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_04/player/800x170'>
+</iframe><div dir="rtl"><ul><li><p>قَـلْبِي الذِي لَا زَالَ فِيكَ مُتَيَّمًا لَوْ كَانَ يُنْزَعُ
+بِاليَمِينِ لَنَزَعْتُهُ (بذلته)</p>
+</li></ul></div><div class="code python highlight-python"><div class="highlight"><pre>%%html
+&lt;iframe width=&#39;815&#39; height=&#39;300&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; marginheight=&#39;0&#39; marginwidth=&#39;0&#39;
+src=&#39;http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_05/player/800x170&#39;&gt;
+&lt;/iframe&gt;
+</pre></div>
+</div>
+<iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
+src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_05/player/800x170'>
+</iframe><div dir="rtl"><ul><li><p>لَوْ كُنْتَ تَنْهَانِي عَنِ المَاءِ الذِي فِيهِ حَيَاةُ النَّفْسِ مَا
+سَوَّغْتُهُ</p>
+</li></ul></div><div class="code python highlight-python"><div class="highlight"><pre>%%html
+&lt;iframe width=&#39;815&#39; height=&#39;300&#39; frameborder=&#39;0&#39; scrolling=&#39;no&#39; marginheight=&#39;0&#39; marginwidth=&#39;0&#39;
+src=&#39;http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_06/player/800x170&#39;&gt;
+&lt;/iframe&gt;
+</pre></div>
+</div>
+<iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
+src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_06/player/800x170'>
+</iframe></div>
+<div class="section" id="analyse-de-la-premiere-phrase">
+<h2>Analyse de la première phrase<a class="headerlink" href="#analyse-de-la-premiere-phrase" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="creation-de-l-instance">
+<h3>Création de l&#8217;instance<a class="headerlink" href="#creation-de-l-instance" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On procèdera premièrement par la création d&#8217;une instance (« objet ») que
+nous nommons <em>barraq</em>. La création de l&#8217;instance se fait en indiquant le
+<em>path</em> du fichier à la classe <em>melodia</em> du module <em>modalis</em> du package
+<em>music22</em>.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/Barraq/P1.wav&quot;</span>
+<span class="n">barraq</span> <span class="o">=</span> <span class="n">music22</span><span class="o">.</span><span class="n">modalis</span><span class="o">.</span><span class="n">melodia</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>Instance created with the audio file : P1.wav
+Instance created with the txt file : P1.txt
+</pre></div>
+</div>
+<p>La création de l&#8217;instance analyse systématiquement les fréquences
+fondamentales (voir la section analyse des fréquences fondamentales f0)
+et les enregistre dans un fichier .txt.</p>
+</div>
+<div class="section" id="parametres-melodiques-principaux">
+<h3>Paramètres mélodiques principaux<a class="headerlink" href="#parametres-melodiques-principaux" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Avec la création de l&#8217;instance, certaines données sont automatiques
+analysées. On peut les obtenir en faisant appels aux attributs de
+l&#8217;instance :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">xmin</span> <span class="c"># la fréquence minimale, en Hertz</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">99.712000000000003</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">xmax</span> <span class="c"># la fréquence maximale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">410.53899999999999</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">mode</span> <span class="c"># le mode : en termes statistiques, la fréquence la plus présente</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">array</span><span class="p">([</span> <span class="mf">244.107</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">166.46600000000001</span>
+</pre></div>
+</div>
+<p>Pour plus de détails concernant l&#8217;analyse de la tonique, voir : ...</p>
+</div>
+<div class="section" id="dessiner-la-courbe-melodique">
+<h3>Dessiner la courbe mélodique<a class="headerlink" href="#dessiner-la-courbe-melodique" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour afficher la courbe mélodique, on peut utilise la méthode .plot().
+La tonique détectée est automatiquement affichée. On peut juger
+visuellement de la pertinance de la tonique détectée.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span> <span class="c"># Les paranthèses sont nécessaires</span>
+</pre></div>
+</div>
+<img alt="../_images/barraq_35_0.png" src="../_images/barraq_35_0.png" />
+</div>
+<div class="section" id="calculer-et-afficher-la-courbe-pdf-probability-density-function-avec-ses-pics">
+<h3>Calculer et afficher la courbe PDF (Probability Density Function) avec ses pics<a class="headerlink" href="#calculer-et-afficher-la-courbe-pdf-probability-density-function-avec-ses-pics" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour afficher les fréquences les plus probables, on utilise la méthode
+<em>.pdf_show()</em>.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">pdf_show</span><span class="p">()</span> <span class="c"># Les parenthèses sont nécessaires.</span>
+</pre></div>
+</div>
+<img alt="../_images/barraq_38_0.png" src="../_images/barraq_38_0.png" />
+<p>Les valeurs de la PDF sont stockées dans l&#8217;attribut <em>barraq.pdf</em></p>
+</div>
+<div class="section" id="obtenir-l-echelle">
+<h3>Obtenir l&#8217;échelle<a class="headerlink" href="#obtenir-l-echelle" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les données de l&#8217;échelle sont stockées dans l&#8217;attribut <em>.scale</em>.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">scale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;243.486973948&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;165.15&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;10.94&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;201.402805611&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;82.74&#39;</span><span class="p">,</span> <span class="s">&#39;6/5&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;3.56&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;324.649298597&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;290.09&#39;</span><span class="p">,</span> <span class="s">&#39;2/1&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;10.94&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;278.557114228&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;223.59&#39;</span><span class="p">,</span> <span class="s">&#39;3/2*10/9&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;1.74&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;375.751503006&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;353.58&#39;</span><span class="p">,</span> <span class="s">&#39;2/1*9/8&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;1.39&#39;</span><span class="p">))]</span>
+</pre></div>
+</div>
+<p>Les fréquences sont indiquées par ordre d&#8217;importance (première colonne).
+Ensuite sont indiquées : 1. les intervalles que forment ces fréquences
+avec la tonique détectée (par défaut, en savart); 2. les intervalles
+épimoriques les plus proches de cet intervalles, 3. sont-ils plus grand
+ou plus petit que l&#8217;intervalle épimorique le plus proche ?; 4. La
+distance qui les sépare (par défaut, en savart).</p>
+<p>Par exemple, dans cette phrase, la fréquence la plus <em>probable</em> est la
+fréquence 243 Hz. Elle forme avec la tonique l&#8217;intervalle 165.15
+savarts. Cet intervalle est plus petit que l&#8217;intervalle épimorique le
+plus proche 3/2 de 10.94 savarts.</p>
+<p>On peut obtenir les intervalles en <em>cent</em>. Il suffit de modifier l&#8217;unité
+de mesure en faisant appel au module <em>diastema</em> :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">music22.diastema</span>
+<span class="n">music22</span><span class="o">.</span><span class="n">diastema</span><span class="o">.</span><span class="n">set_unit</span><span class="p">(</span><span class="s">&#39;cent&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>Unit is now set to : cent
+</pre></div>
+</div>
+<p>Puis calculer l&#8217;échelle de nouveau avec la méthode <em>get_scale()</em>, avant
+d&#8217;appeler l&#8217;attribut <em>.scale</em></p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">get_scale</span><span class="p">()</span>
+<span class="n">barraq</span><span class="o">.</span><span class="n">scale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;243.486973948&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;165.15&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;10.94&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;201.402805611&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;82.74&#39;</span><span class="p">,</span> <span class="s">&#39;6/5&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;3.56&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;324.649298597&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;290.09&#39;</span><span class="p">,</span> <span class="s">&#39;2/1&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;10.94&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;278.557114228&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;223.59&#39;</span><span class="p">,</span> <span class="s">&#39;3/2*10/9&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;1.74&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;375.751503006&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;353.58&#39;</span><span class="p">,</span> <span class="s">&#39;2/1*9/8&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;1.39&#39;</span><span class="p">))]</span>
+</pre></div>
+</div>
+<p>(BUG à corriger : en <em>cent</em> les signes + et moins - ne sont pas pris en
+considération).</p>
+</div>
+<div class="section" id="dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">
+<h3>Dessiner la courbe mélodique en intégrant les intervalles calculés<a class="headerlink" href="#dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour dessiner la courbe mélodique en prenant en considération le calcule
+des pics intervalliques et l&#8217;échelle, il suffit de fait de nouveau appel
+à la méthode <em>.plot()</em> en indiquant l&#8217;argument <em>peaks=&#8221;Yes&#8221;</em> :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">music22</span><span class="o">.</span><span class="n">diastema</span><span class="o">.</span><span class="n">set_unit</span><span class="p">(</span><span class="s">&#39;savart&#39;</span><span class="p">)</span>
+<span class="n">barraq</span><span class="o">.</span><span class="n">get_scale</span><span class="p">()</span>
+<span class="n">barraq</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">peaks</span><span class="o">=</span><span class="s">&quot;Yes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>Unit is now set to : savart
+</pre></div>
+</div>
+<img alt="../_images/barraq_52_1.png" src="../_images/barraq_52_1.png" />
+</div>
+</div>
+<div class="section" id="analyse-et-comparaison-d-un-ensemble-de-melodies">
+<h2>Analyse et comparaison d&#8217;un ensemble de mélodies<a class="headerlink" href="#analyse-et-comparaison-d-un-ensemble-de-melodies" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id1">
+<h3>Création de l&#8217;instance<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La gestion de plusieurs mélodies/phrases s&#8217;effectue à travers la classe
+<em>melodies</em> du module <em>modalis</em>.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/Barraq/&quot;</span>
+<span class="n">Barraq</span> <span class="o">=</span> <span class="n">music22</span><span class="o">.</span><span class="n">modalis</span><span class="o">.</span><span class="n">melodies</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c"># Création de l&#39;instance _melodies_ du module modalis</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>Reading the content of : /Users/anas/AUDIO/Barraq/
+
+
+Instance created with the audio file : P0.wav
+Instance created with the txt file : P0.txt
+/Users/anas/AUDIO/Barraq/P0.wav appended
+Instance created with the audio file : P0.wav
+Instance created with the txt file : P0.txt
+Instance created with the audio file : P1.wav
+Instance created with the txt file : P1.txt
+/Users/anas/AUDIO/Barraq/P1.wav appended
+Instance created with the audio file : P1.wav
+Instance created with the txt file : P1.txt
+Instance created with the audio file : P2.wav
+Instance created with the txt file : P2.txt
+/Users/anas/AUDIO/Barraq/P2.wav appended
+Instance created with the audio file : P2.wav
+Instance created with the txt file : P2.txt
+Instance created with the audio file : P3.wav
+Instance created with the txt file : P3.txt
+/Users/anas/AUDIO/Barraq/P3.wav appended
+Instance created with the audio file : P3.wav
+Instance created with the txt file : P3.txt
+Instance created with the audio file : P4.wav
+Instance created with the txt file : P4.txt
+/Users/anas/AUDIO/Barraq/P4.wav appended
+Instance created with the audio file : P4.wav
+Instance created with the txt file : P4.txt
+Instance created with the audio file : P5.wav
+Instance created with the txt file : P5.txt
+/Users/anas/AUDIO/Barraq/P5.wav appended
+Instance created with the audio file : P5.wav
+Instance created with the txt file : P5.txt
+Instance created with the audio file : P6.wav
+Instance created with the txt file : P6.txt
+/Users/anas/AUDIO/Barraq/P6.wav appended
+Instance created with the audio file : P6.wav
+Instance created with the txt file : P6.txt
+</pre></div>
+</div>
+<p>Les fichiers contenant les fréquences fondamentales (.txt) sont stockés
+dans un dossier f0 créé dans le dossier principal.</p>
+</div>
+<div class="section" id="affichage-des-courbes-pdf-s">
+<h3>Affichage des courbes PDF-s<a class="headerlink" href="#affichage-des-courbes-pdf-s" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Afficher toutes les courbes PDF-s avec la méthode <em>.pdf_show()</em> :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Barraq</span><span class="o">.</span><span class="n">pdf_show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/barraq_60_0.png" src="../_images/barraq_60_0.png" />
+</div>
+<div class="section" id="obtenir-l-echelle-d-une-melodie">
+<h3>Obtenir l&#8217;échelle d&#8217;une mélodie<a class="headerlink" href="#obtenir-l-echelle-d-une-melodie" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On peut obtenir l&#8217;échelle d&#8217;une phrase en indiquant son numéro :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Barraq</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">scale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;241.482965932&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;187.95&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;11.86&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;201.402805611&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;109.13&#39;</span><span class="p">,</span> <span class="s">&#39;5/4&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;12.22&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;301.603206413&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;284.50&#39;</span><span class="p">,</span> <span class="s">&#39;3/2*5/4&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;11.50&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;321.643286573&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;312.44&#39;</span><span class="p">,</span> <span class="s">&#39;2/1&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;11.41&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;279.559118236&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;251.53&#39;</span><span class="p">,</span> <span class="s">&#39;3/2*6/5&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;3.74&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;364.729458918&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;367.03&#39;</span><span class="p">,</span> <span class="s">&#39;2/1*6/5&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;13.18&#39;</span><span class="p">))]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dessiner-une-ligne-melodie-avec-l-echelle-calculee">
+<h3>Dessiner une ligne mélodie avec l&#8217;échelle calculée<a class="headerlink" href="#dessiner-une-ligne-melodie-avec-l-echelle-calculee" title="Lien permanent vers ce titre">¶</a></h3>
+<p>et afficher sa courbe mélodique :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Barraq</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">peaks</span><span class="o">=</span><span class="s">&quot;Yes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../_images/barraq_66_0.png" src="../_images/barraq_66_0.png" />
+</div>
+<div class="section" id="matrice-des-distances-classement-hierarchique">
+<h3>Matrice des distances / classement hiérarchique<a class="headerlink" href="#matrice-des-distances-classement-hierarchique" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La méthode <em>.matrix()</em> donne la matice des similarités et le classement
+hiérarchique :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Barraq</span><span class="o">.</span><span class="n">matrix</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/barraq_69_0.png" src="../_images/barraq_69_0.png" />
+<p>On peut lire que la phrase P3 est la plus éloignée des autres phrases et
+plus particulièrement de la phrase P4. La phrase qui contient les
+caractétistiques proches de l&#8217;ensemble du fichier (P0) est la phrase P2.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quatre_chants.html" class="btn btn-neutral float-right" title="Quatre variantes d’un chant de femmes du sud-est tunisien" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../examples.html" class="btn btn-neutral" title="Tutoriels and exemples" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Anas Ghrab.
+      Mis à jour le Sep 11, 2015.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

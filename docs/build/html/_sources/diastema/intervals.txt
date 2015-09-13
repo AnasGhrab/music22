@@ -1,0 +1,9 @@
+:mod:`intervals`
+================
+
+.. automodule:: music22.diastema.intervals
+   :members:
+   :undoc-members:
+   :special-members:
+   :inherited-members:
+   :show-inheritance:

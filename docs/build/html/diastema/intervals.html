@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>intervals &mdash; music22 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="music22 0.0.1 documentation" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">music22 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-music22.diastema.intervals">
+<span id="intervals"></span><h1><code class="xref py py-mod docutils literal"><span class="pre">intervals</span></code><a class="headerlink" href="#module-music22.diastema.intervals" title="Permalink to this headline">¶</a></h1>
+<p>Intervals : Core operations on intervals.</p>
+<p>This modules contains methods for basic operations on intervals for <cite>conversions</cite> from logarithmic into linear spaces, a list of reference <cite>epimoric intervals</cite> and a method for setting the <cite>unit</cite> be used.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">set_unit</span><span class="p">(</span><span class="s">&quot;savart&quot;</span><span class="p">)</span>
+<span class="go">Unit is now set to : savart</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dias</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span>
+<span class="go">176.09125905568123</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">set_unit</span><span class="p">(</span><span class="s">&quot;cent&quot;</span><span class="p">)</span>
+<span class="go">Unit is now set to : cent</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dias</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span>
+<span class="go">701.95500086538743</span>
+</pre></div>
+</div>
+<p>You can also get the closest <cite>epimoric reference</cite> interval to an interval in the current unit, and the difference. If we are using the savart units :</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">intervalles</span><span class="o">.</span><span class="n">get_inter_ref</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+<span class="go">(&#39;300.00&#39;, &#39;2/1&#39;, &#39;-&#39;, &#39;1.03&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">intervalles</span><span class="o">.</span><span class="n">get_inter_ref</span><span class="p">(</span><span class="mi">303</span><span class="p">)</span>
+<span class="go">(&#39;303.00&#39;, &#39;2/1&#39;, &#39;+&#39;, &#39;1.97&#39;)</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="music22.diastema.intervals.cent">
+<code class="descclassname">music22.diastema.intervals.</code><code class="descname">cent</code><span class="sig-paren">(</span><em>y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/music22/diastema/intervals.html#cent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.diastema.intervals.cent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the given interval (as ratio) to cent.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.diastema.intervals.convert_ref">
+<code class="descclassname">music22.diastema.intervals.</code><code class="descname">convert_ref</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/music22/diastema/intervals.html#convert_ref"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.diastema.intervals.convert_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert all the reference interval set by the global variable inter from ratios to a linear space.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.diastema.intervals.dias">
+<code class="descclassname">music22.diastema.intervals.</code><code class="descname">dias</code><span class="sig-paren">(</span><em>y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/music22/diastema/intervals.html#dias"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.diastema.intervals.dias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the given interval (as ratio) to the global chosen unit. Default is savart.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.diastema.intervals.get_echelle">
+<code class="descclassname">music22.diastema.intervals.</code><code class="descname">get_echelle</code><span class="sig-paren">(</span><em>echelle</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/music22/diastema/intervals.html#get_echelle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.diastema.intervals.get_echelle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="music22.diastema.intervals.get_inter_ref">
+<code class="descclassname">music22.diastema.intervals.</code><code class="descname">get_inter_ref</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/music22/diastema/intervals.html#get_inter_ref"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.diastema.intervals.get_inter_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look for the closest epimoric interval</p>
+<blockquote>
+<div>x : an interval in Savart/Cent</div></blockquote>
+<blockquote>
+<div>y : the closest interval from The Interval List Int()</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.diastema.intervals.get_intervals">
+<code class="descclassname">music22.diastema.intervals.</code><code class="descname">get_intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/music22/diastema/intervals.html#get_intervals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.diastema.intervals.get_intervals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints de list of all available reference intervals.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.diastema.intervals.get_unit">
+<code class="descclassname">music22.diastema.intervals.</code><code class="descname">get_unit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/music22/diastema/intervals.html#get_unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.diastema.intervals.get_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the currently used unit.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.diastema.intervals.savart">
+<code class="descclassname">music22.diastema.intervals.</code><code class="descname">savart</code><span class="sig-paren">(</span><em>y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/music22/diastema/intervals.html#savart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.diastema.intervals.savart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the given interval (as ratio) to savart.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.diastema.intervals.set_unit">
+<code class="descclassname">music22.diastema.intervals.</code><code class="descname">set_unit</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/music22/diastema/intervals.html#set_unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.diastema.intervals.set_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the unit to be used : possible units are savart and cent.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/diastema/intervals.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">music22 0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Anas Ghrab.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>
