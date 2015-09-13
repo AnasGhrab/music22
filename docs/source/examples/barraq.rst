@@ -3,9 +3,9 @@
 =========================================================
 
 *Les commandes ci-dessous sont une introduction à l'utilisation pratique
-du package* :ref:`Music22 <intro>`. *Il s'adresse à des utilisateurs sans
+du package* :ref:`music22 <intro>`. *Il s'adresse à des utilisateurs sans
 connaissance préalable de la programmation, mais qui ont pris
-connaissance des* :ref:`premières étapes de l'utilisation de Python <intro_python>` *et ont* :ref:`installé le package Music22 <install>`.
+connaissance des* :ref:`premières étapes de l'utilisation de Python <intro_python>` *et ont* :ref:`installé le package music22 <install>`.
 
 *L'explication musicologique et les commentaires liés à cette méthode
 d'analyse ont été présentés lors de la rencontre sur les maqām-s et
@@ -286,8 +286,8 @@ Création de l'instance
 
 On procèdera premièrement par la création d'une instance (« objet ») que
 nous nommons *barraq*. La création de l'instance se fait en indiquant le
-*path* du fichier à la classe *melodia* du module *modalis* du package
-*music22*.
+*path* du fichier à la classe :class:`music22.modalis.melodia` du module :mod:`music22.modalis` du package
+`music22`.
 
 .. code:: python
 
@@ -501,7 +501,7 @@ Création de l'instance
 ~~~~~~~~~~~~~~~~~~~~~~
 
 La gestion de plusieurs mélodies/phrases s'effectue à travers la classe
-*melodies* du module *modalis*.
+:class:`music22.modalis.melodies` du module :mod:`music22.modalis`.
 
 .. code:: python
 
