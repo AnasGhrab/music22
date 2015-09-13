@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quatre variantes d’un chant de femmes du sud-est tunisien &mdash; documentation music22 0.0.2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation music22 0.0.2" href="../index.html"/>
+        <link rel="up" title="Tutoriels and exemples" href="../examples.html"/>
+        <link rel="next" title="API Reference" href="../API.html"/>
+        <link rel="prev" title="Qaṣīda/Ibtihāl par ʿAlī al-Barrāq (1891-1981, Kairouan)" href="barraq.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> music22
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro_python.html">Introduction à Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../examples.html">Tutoriels and exemples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="barraq.html"><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="barraq.html#importation-du-module-modalis">Importation du module <em>modalis</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="barraq.html#ecoute-de-la-totalite-de-l-enregistrement-segmente-en-six-phrases">Écoute de la totalité de l&#8217;enregistrement segmenté en six phrases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="barraq.html#analyse-de-la-premiere-phrase">Analyse de la première phrase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#creation-de-l-instance">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#parametres-melodiques-principaux">Paramètres mélodiques principaux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#dessiner-la-courbe-melodique">Dessiner la courbe mélodique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#calculer-et-afficher-la-courbe-pdf-probability-density-function-avec-ses-pics">Calculer et afficher la courbe PDF (Probability Density Function) avec ses pics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#obtenir-l-echelle">Obtenir l&#8217;échelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">Dessiner la courbe mélodique en intégrant les intervalles calculés</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="barraq.html#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#id1">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#matrice-des-distances-classement-hierarchique">Matrice des distances / classement hiérarchique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Quatre variantes d&#8217;un chant de femmes du sud-est tunisien</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ecoute-des-versions">Écoute des versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analyse-et-affichage-des-pdf-s">Analyse et affichage des PDF-s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transposition-des-frequences">Transposition des fréquences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#matrice-des-distances-et-groupement-hierarchique">Matrice des distances et groupement hiérarchique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extraction-des-echelles">Extraction des échelles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">API Reference</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">music22</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../examples.html">Tutoriels and exemples</a> &raquo;</li>
+      
+    <li>Quatre variantes d&#8217;un chant de femmes du sud-est tunisien</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/examples/quatre_chants.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="quatre-variantes-d-un-chant-de-femmes-du-sud-est-tunisien">
+<h1>Quatre variantes d&#8217;un chant de femmes du sud-est tunisien<a class="headerlink" href="#quatre-variantes-d-un-chant-de-femmes-du-sud-est-tunisien" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">music22</span> <span class="kn">import</span> <span class="n">modalis</span><span class="p">,</span><span class="n">scale</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/quatre_chants/&quot;</span>
+<span class="n">Kchants</span> <span class="o">=</span> <span class="n">modalis</span><span class="o">.</span><span class="n">melodies</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="s">&#39;Yes&#39;</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>Reading the content of : /Users/anas/AUDIO/quatre_chants/
+
+
+Instance created with the audio file : Gh11.wav
+Instance created with the txt file : Gh11.txt
+/Users/anas/AUDIO/quatre_chants/Gh11.wav appended
+Instance created with the audio file : Gh11.wav
+Instance created with the txt file : Gh11.txt
+Instance created with the audio file : Gu16.wav
+Instance created with the txt file : Gu16.txt
+/Users/anas/AUDIO/quatre_chants/Gu16.wav appended
+Instance created with the audio file : Gu16.wav
+Instance created with the txt file : Gu16.txt
+Instance created with the audio file : Ta12.wav
+Instance created with the txt file : Ta12.txt
+/Users/anas/AUDIO/quatre_chants/Ta12.wav appended
+Instance created with the audio file : Ta12.wav
+Instance created with the txt file : Ta12.txt
+Instance created with the audio file : Ta13.wav
+Instance created with the txt file : Ta13.txt
+/Users/anas/AUDIO/quatre_chants/Ta13.wav appended
+Instance created with the audio file : Ta13.wav
+Instance created with the txt file : Ta13.txt
+</pre></div>
+</div>
+<div class="section" id="ecoute-des-versions">
+<h2>Écoute des versions<a class="headerlink" href="#ecoute-des-versions" title="Lien permanent vers ce titre">¶</a></h2>
+<iframe width='815' height='255' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://phonotheque.cmam.tn/archives/items/femmes_ghomrassen_2007_11/player/800x170'></iframe><iframe width='815' height='255' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://phonotheque.cmam.tn/archives/items/femmes_guermessa_16/player/800x170'></iframe><iframe width='815' height='255' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://phonotheque.cmam.tn/archives/items/femmes_tataouine_012/player/800x170'></iframe><iframe width='815' height='255' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://phonotheque.cmam.tn/archives/items/femmes_tataouine_013/player/800x170'></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="analyse-et-affichage-des-pdf-s">
+<h2>Analyse et affichage des PDF-s<a class="headerlink" href="#analyse-et-affichage-des-pdf-s" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">pdf_show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/quatre_chants_8_0.png" src="../_images/quatre_chants_8_0.png" />
+</div>
+<div class="section" id="transposition-des-frequences">
+<h2>Transposition des fréquences<a class="headerlink" href="#transposition-des-frequences" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">scale</span><span class="o">.</span><span class="n">set_xrange</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">pdf_show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/quatre_chants_11_0.png" src="../_images/quatre_chants_11_0.png" />
+</div>
+<div class="section" id="matrice-des-distances-et-groupement-hierarchique">
+<h2>Matrice des distances et groupement hiérarchique<a class="headerlink" href="#matrice-des-distances-et-groupement-hierarchique" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">matrix</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/quatre_chants_13_0.png" src="../_images/quatre_chants_13_0.png" />
+</div>
+<div class="section" id="extraction-des-echelles">
+<h2>Extraction des échelles<a class="headerlink" href="#extraction-des-echelles" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&#39;Gh11&#39;</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;330.661322645&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;37.55&#39;</span><span class="p">,</span> <span class="s">&#39;12/11&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;0.24&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;299.599198397&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-5.29&#39;</span><span class="p">,</span> <span class="s">&#39;1/1&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;5.29&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;263.527054108&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-61.01&#39;</span><span class="p">,</span> <span class="s">&#39;9/8&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;9.85&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;370.741482966&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;87.24&#39;</span><span class="p">,</span> <span class="s">&#39;9/8*12/11&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;1.70&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;407.815631263&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;128.63&#39;</span><span class="p">,</span> <span class="s">&#39;4/3&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;3.69&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;396.793587174&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;116.73&#39;</span><span class="p">,</span> <span class="s">&#39;4/3&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;8.21&#39;</span><span class="p">))]</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&#39;Gu16&#39;</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;299.599198397&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;11.97&#39;</span><span class="p">,</span> <span class="s">&#39;1/1&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;11.97&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;362.725450902&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;95.01&#39;</span><span class="p">,</span> <span class="s">&#39;5/4&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;1.90&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;328.657314629&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;52.17&#39;</span><span class="p">,</span> <span class="s">&#39;9/8&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;1.02&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;243.486973948&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-78.09&#39;</span><span class="p">,</span> <span class="s">&#39;6/5&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;1.09&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;422.845691383&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;161.61&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;14.48&#39;</span><span class="p">))]</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&#39;Ta12&#39;</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">scale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;299.599198397&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-46.97&#39;</span><span class="p">,</span> <span class="s">&#39;10/9&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;1.21&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;325.651302605&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-10.75&#39;</span><span class="p">,</span> <span class="s">&#39;1/1&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;10.75&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;265.531062124&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-99.39&#39;</span><span class="p">,</span> <span class="s">&#39;5/4&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;2.48&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;368.73747495&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;43.21&#39;</span><span class="p">,</span> <span class="s">&#39;10/9&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;2.55&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;227.45490982&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-166.61&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;9.48&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;423.847695391&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;103.70&#39;</span><span class="p">,</span> <span class="s">&#39;5/4&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;6.79&#39;</span><span class="p">))]</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="s">&#39;Ta13&#39;</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">Kchants</span><span class="o">.</span><span class="n">melodies</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">scale</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;349.699398798&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;67.73&#39;</span><span class="p">,</span> <span class="s">&#39;6/5&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;11.45&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;299.599198397&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;0.58&#39;</span><span class="p">,</span> <span class="s">&#39;1/1&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;0.58&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;326.653306613&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;38.13&#39;</span><span class="p">,</span> <span class="s">&#39;12/11&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;0.34&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;281.563126253&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-26.38&#39;</span><span class="p">,</span> <span class="s">&#39;12/11&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;11.40&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;265.531062124&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;-51.85&#39;</span><span class="p">,</span> <span class="s">&#39;9/8&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;0.69&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;383.76753507&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;108.11&#39;</span><span class="p">,</span> <span class="s">&#39;5/4&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;11.20&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;396.793587174&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;122.60&#39;</span><span class="p">,</span> <span class="s">&#39;4/3&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;2.33&#39;</span><span class="p">))]</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../API.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="barraq.html" class="btn btn-neutral" title="Qaṣīda/Ibtihāl par ʿAlī al-Barrāq (1891-1981, Kairouan)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Anas Ghrab.
+      Mis à jour le Sep 11, 2015.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

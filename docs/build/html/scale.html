@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Scale : Analyse the scale of a melody. &mdash; documentation music22 0.0.2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation music22 0.0.2" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> music22
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro_python.html">Introduction à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Tutoriels and exemples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/barraq.html"><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/barraq.html#importation-du-module-modalis">Importation du module <em>modalis</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/barraq.html#ecoute-de-la-totalite-de-l-enregistrement-segmente-en-six-phrases">Écoute de la totalité de l&#8217;enregistrement segmenté en six phrases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/barraq.html#analyse-de-la-premiere-phrase">Analyse de la première phrase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#creation-de-l-instance">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#parametres-melodiques-principaux">Paramètres mélodiques principaux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#dessiner-la-courbe-melodique">Dessiner la courbe mélodique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#calculer-et-afficher-la-courbe-pdf-probability-density-function-avec-ses-pics">Calculer et afficher la courbe PDF (Probability Density Function) avec ses pics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#obtenir-l-echelle">Obtenir l&#8217;échelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">Dessiner la courbe mélodique en intégrant les intervalles calculés</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="examples/barraq.html#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#id1">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#matrice-des-distances-classement-hierarchique">Matrice des distances / classement hiérarchique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples/quatre_chants.html">Quatre variantes d&#8217;un chant de femmes du sud-est tunisien</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#ecoute-des-versions">Écoute des versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#analyse-et-affichage-des-pdf-s">Analyse et affichage des PDF-s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#transposition-des-frequences">Transposition des fréquences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#matrice-des-distances-et-groupement-hierarchique">Matrice des distances et groupement hiérarchique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#extraction-des-echelles">Extraction des échelles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API.html">API Reference</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">music22</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Scale : Analyse the scale of a melody.</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/scale.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/Users/anas/python/music22/doc/source/scale.rst</tt>, line 2)</p>
+Field list ends without a blank line; unexpected unindent.</div>
+<hr class="docutils" />
+<span class="target" id="module-music22.scale"></span><div class="section" id="scale-analyse-the-scale-of-a-melody">
+<h1>Scale : Analyse the scale of a melody.<a class="headerlink" href="#scale-analyse-the-scale-of-a-melody" title="Lien permanent vers ce titre">¶</a></h1>
+<p>This module provides function to analyse the scale of a melody.</p>
+<ul class="simple">
+<li>Evaluate the PDF of the frequencies</li>
+<li>Get Peaks of the main frequencies</li>
+<li>Plots the PDF and the Peaks</li>
+<li>Gives the scale and compare intervals to reference epimoric intervals</li>
+</ul>
+<dl class="function">
+<dt id="music22.scale.kde">
+<code class="descclassname">music22.scale.</code><code class="descname">kde</code><span class="sig-paren">(</span><em>freqs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/scale.html#kde"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.scale.kde" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Estimate the pdf of the freqs using a Kernel Density Estimation.</p>
+<p>The estimation is done on the frequencies (0,500).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>freqs</strong> (<em>numpy.ndarray</em>) &#8211; A list of frequencies in Hz.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><strong>pdf</strong> &#8211;
+the pdf function of freqs.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type retourné:</th><td class="field-body">scipy.stats.kde.gaussian_kde</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Exemple:</dt>
+<dd><div class="first highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">music22</span> <span class="kn">import</span> <span class="n">diastema</span><span class="p">,</span><span class="n">scale</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<div class="last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">file_path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/Barraq/txt/P0.txt&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">freqs</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">freqs</span> <span class="o">=</span> <span class="n">music22</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">clean_list</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pdf</span> <span class="o">=</span> <span class="n">music22</span><span class="o">.</span><span class="n">scale</span><span class="o">.</span><span class="n">kde</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pdf</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.scale.order_peaks">
+<code class="descclassname">music22.scale.</code><code class="descname">order_peaks</code><span class="sig-paren">(</span><em>xpeaks</em>, <em>ypeaks</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/scale.html#order_peaks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.scale.order_peaks" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Orders the peaks following their probability</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>xpeaks</strong> (<em>numpy.array</em>) &#8211; list of peaks (Hz.)</li>
+<li><strong>ypeaks</strong> (<em>numpy.array</em>) &#8211; probability of the peaks</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><p class="first"><strong>ordredpeaks</strong> &#8211;
+a table with ordered frequencies</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">pandas.core.frame.DataFrame</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.scale.pdf_show">
+<code class="descclassname">music22.scale.</code><code class="descname">pdf_show</code><span class="sig-paren">(</span><em>pdf</em>, <em>xpeaks</em>, <em>ypeaks</em>, <em>label='pdf'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/scale.html#pdf_show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.scale.pdf_show" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Plot the PDF and the peaks of the frequencies.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pdf</strong> (<em>numpy.ndarray</em>) &#8211; the PDF of the frequencies given by kde()</li>
+<li><strong>xpeaks</strong> (<em>numpy.ndarray</em>) &#8211; frequencies of the peaks, given by peaks()</li>
+<li><strong>ypeaks</strong> (<em>numpy.ndarray</em>) &#8211; pdf values of the peaks, given by peaks()</li>
+<li><strong>label</strong> (<em>str</em>) &#8211; label to give to the figure (<cite>optional</cite>)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Returns :</dt>
+<dd>A plot</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.scale.peaks">
+<code class="descclassname">music22.scale.</code><code class="descname">peaks</code><span class="sig-paren">(</span><em>pdf</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/scale.html#peaks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.scale.peaks" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Get the peaks of the estimated Probability Density Function.</p>
+<p>The estimation is done on the frequencies (0,500).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>pdf</strong> (<em>numpy.array</em>) &#8211; the probability of the frequencies in the range 0-500 Hz.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><strong>xpeaks</strong> &#8211;
+the peaks frequencies.
+ypeaks (numpy.array) : the probability of the peaks.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type retourné:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.scale.set_bw_method">
+<code class="descclassname">music22.scale.</code><code class="descname">set_bw_method</code><span class="sig-paren">(</span><em>method</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/scale.html#set_bw_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.scale.set_bw_method" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Set the bw_method for gaussian.kde.</p>
+<dl class="docutils">
+<dt>Args :</dt>
+<dd>bw_method (str or scalar) : &#8216;scott&#8217; (default), &#8216;silvermann&#8217;</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.scale.set_xrange">
+<code class="descclassname">music22.scale.</code><code class="descname">set_xrange</code><span class="sig-paren">(</span><em>min</em>, <em>max</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/scale.html#set_xrange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.scale.set_xrange" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Set the limits of x for plots and pdfs.</p>
+<dl class="docutils">
+<dt>Args :</dt>
+<dd>xmin (int): x-minimum
+xmax (int): x-maximum</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Anas Ghrab.
+      Mis à jour le Sep 11, 2015.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

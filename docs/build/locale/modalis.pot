@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Anas Ghrab
+# This file is distributed under the same license as the music22 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-11 11:02+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/modalis.rst:5
+msgid "Modalis API"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis:2
+msgid "Modalis: Basics of Modality"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis:4
+msgid "The module **modalis** focuses on the fundamental elements of modality in a melody. Its defines a Melodie class for getting :"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis:9
+msgid "The Dominant : It is based on :"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis:7
+msgid "** The most present frequency (Todo). ** The most probable frequency."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:1
+msgid "Create the melodia object."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:12
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:18
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:24
+msgid "*numpy.ndarray*"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:14
+msgid "The list of frequencies without Zeros neither NaNs."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:20
+msgid "The Probability Density Function on the range 0-500 Hz."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:26
+msgid "the Peaks of the PDF and their values."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:30
+msgid "*pandas.core.frame.DataFrame*"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:32
+msgid "The Peaks ordered by their probability."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:36
+msgid "*numpy.float64*"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:38
+msgid "the dominant frequency."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:42
+msgid "*pandas.core.series.Series*"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:44
+msgid "the list of intervals in the choosen Unit (default is `savarts`)."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:48
+msgid "*list*"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:50
+msgid "the Scale from the Dominant, compared to reference epimoric intervals."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:54
+msgid "*matplotlibfigure*"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:56
+msgid "the PDF plot with peaks."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia:60
+msgid "Example"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.get_scale:1
+msgid "Get the scale of the melody."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.get_scale:3
+msgid "the reference frequencies to calculate the scale. It could be the _tonic_ (self.tonique) or the _domin_ (self.dominante)"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.get_scale:6
+msgid "**self.intervals** -- the intervals in the the choosen linear Unit. self.scale (): The scale compared to reference intervals."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.get_tonique:1
+msgid "Get the tonic of a melody."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.get_tonique:3
+msgid "the percentage of the last considered frequencies."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.get_tonique:5
+msgid "The method to be used for the analysis : \"pdf\" or \"mode\"."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.get_tonique:8
+msgid "**tonic** -- The detected tonic."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.pdf_show:1
+msgid "Show the pdf."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.plot:1
+msgid "Plots the melody frequencies"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.plot:3
+msgid "Draw the peak-lines. Default=\"Yes\""
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.plot:5
+msgid "width of the figure. Default = 12"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodia.plot:7
+msgid "height of the figure. Default = 6"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodies:1
+msgid "This class defines a set of `melodia`-a and compares them."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodies.corr:1
+msgid "Calculate distances between PDFs."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodies.corr:3
+msgid "list of pdf lists."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodies.corr:5
+msgid "the metric method : euclidian, KL (Kullback-Leibler). Default is KL."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodies.corr:8
+msgid "self.distances"
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.melodies.matrix:1
+msgid "Plot the matrix and heatmap of PDFS."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.transmode:1
+msgid "Transpose all the frequencies by setting the _mode_ on a given reference frequency."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.transmode:3
+msgid "A list of frequencies to be transposed."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.transmode:5
+msgid "The frequency reference to be transposed to. Default = 300."
+msgstr ""
+
+#: ../../../../../../../usr/local/lib/python2.7/site-packages/music22-0.0.2-py2.7.egg/music22/modalis.py:docstring of music22.modalis.transmode:9
+msgid "**transfreq** -- a list of the transposed frequencies."
+msgstr ""
+

@@ -1,0 +1,9 @@
+:mod:`scale`
+=============
+
+.. automodule:: music22.diastema.scale
+   :members:
+   :undoc-members:
+   :special-members:
+   :inherited-members:
+   :show-inheritance:

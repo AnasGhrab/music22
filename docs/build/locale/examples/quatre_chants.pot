@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Anas Ghrab
+# This file is distributed under the same license as the music22 package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: music22 0.0.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-11 11:02+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/examples/quatre_chants.rst:3
+msgid "Quatre variantes d'un chant de femmes du sud-est tunisien"
+msgstr ""
+
+#: ../../source/examples/quatre_chants.rst:42
+msgid "Écoute des versions"
+msgstr ""
+
+#: ../../source/examples/quatre_chants.rst:64
+msgid "Analyse et affichage des PDF-s"
+msgstr ""
+
+#: ../../source/examples/quatre_chants.rst:76
+msgid "Transposition des fréquences"
+msgstr ""
+
+#: ../../source/examples/quatre_chants.rst:92
+msgid "Matrice des distances et groupement hiérarchique"
+msgstr ""
+
+#: ../../source/examples/quatre_chants.rst:104
+msgid "Extraction des échelles"
+msgstr ""
+

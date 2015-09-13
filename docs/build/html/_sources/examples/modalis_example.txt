@@ -1,0 +1,173 @@
+
+Example with one file
+=====================
+
+.. code:: python
+
+    %matplotlib inline
+    import numpy
+    from music22 import modalis
+
+.. code:: python
+
+    file_path = "/Users/anas/AUDIO/Barraq/txt/P0.txt"
+    freqs = numpy.loadtxt(file_path)
+
+.. code:: python
+
+    barraqp0 = modalis.melodia(freqs)
+
+.. code:: python
+
+    barraqp0.scale
+
+
+
+
+.. parsed-literal::
+
+    [('242.48496994', ('0.00', '1/1', '+', '0.00')),
+     ('200.400801603', ('-82.79', '6/5', '-', '3.60')),
+     ('274.549098196', ('53.94', '9/8', '+', '2.78')),
+     ('218.436873747', ('-45.36', '10/9', '-', '0.40')),
+     ('162.324649299', ('-174.30', '3/2', '-', '1.79')),
+     ('321.643286573', ('122.69', '4/3', '-', '2.25')),
+     ('296.593186373', ('87.48', '9/8*12/11', '-', '1.46')),
+     ('365.731462926', ('178.48', '3/2', '+', '2.39')),
+     ('404.809619238', ('222.57', '3/2*10/9', '+', '0.72')),
+     ('434.869739479', ('253.67', '3/2*6/5', '-', '1.60'))]
+
+
+
+.. code:: python
+
+    barraqp0.pdf_show()
+
+
+
+.. image:: modalis_example_files/modalis_example_5_0.png
+
+
+Example with multiple files
+===========================
+
+.. code:: python
+
+    path = "/Users/anas/AUDIO/Barraq/txt/"
+    Barraq = modalis.melodies(path)
+
+.. code:: python
+
+    Barraq.pdf_show()
+
+
+
+.. image:: modalis_example_files/modalis_example_8_0.png
+
+
+.. code:: python
+
+    Barraq.melodies[2].scale
+
+
+
+
+.. parsed-literal::
+
+    [('241.482965932', ('0.00', '1/1', '+', '0.00')),
+     ('201.402805611', ('-78.82', '6/5', '-', '0.36')),
+     ('301.603206413', ('96.55', '5/4', '-', '0.36')),
+     ('321.643286573', ('124.49', '4/3', '-', '0.45')),
+     ('279.559118236', ('63.59', '9/8', '+', '12.43')),
+     ('364.729458918', ('179.08', '3/2', '+', '2.99'))]
+
+
+
+.. code:: python
+
+    Barraq.matrix()
+
+
+
+.. image:: modalis_example_files/modalis_example_10_0.png
+
+
+Measure distances
+=================
+
+.. code:: python
+
+    Barraq.corr(metric='KL')
+    Barraq.distances
+
+
+
+
+.. parsed-literal::
+
+    [0.07922494722821323,
+     0.040809814646407108,
+     0.15882207621728223,
+     0.23556335010388174,
+     0.10294061996791626,
+     0.12200073479685059,
+     0.10858769483589574,
+     0.30365921142811697,
+     0.16783854305643292,
+     0.076116215016051203,
+     0.17614504196438158,
+     0.10381292392877692,
+     0.28684106873703452,
+     0.11902241252057461,
+     0.17111800464971663,
+     0.99581318349868098,
+     0.59250711676771672,
+     0.61360221771879797,
+     0.086075614750767387,
+     0.144112187423378,
+     0.10026090297259377]
+
+
+
+Tests
+=====
+
+.. code:: python
+
+    import unittest
+    
+    class TestScale(unittest.TestCase):
+        def test_clean_list(self):
+            """Is the list clean from zeros ? and NaNs (todo...)"""
+            L = numpy.array([0,23,53,0,32])
+            Lclear = numpy.array([23,53,32])
+            self.assertItemsEqual(Lclear,clean_list(L))
+    
+        def test_pdf(self):
+            """Testing the Propability Density Function"""
+            freqs = numpy.array([3,2,4])
+            #self.assertEqual(scipy.stats.kde.gaussian_kde,pdf(scipy.stats.kde.gaussian_kde))
+
+.. code:: python
+
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestScale)
+    unittest.TextTestRunner().run(suite)
+
+
+.. parsed-literal::
+
+    .
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.001s
+    
+    OK
+
+
+
+
+.. parsed-literal::
+
+    <unittest.runner.TextTestResult run=1 errors=0 failures=0>
+
+
+

@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>music22.core &mdash; documentation music22 0.0.2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation music22 0.0.2" href="../../index.html"/>
+        <link rel="up" title="Code du module" href="../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> music22
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../intro_python.html">Introduction à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Tutoriels and exemples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/barraq.html"><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/barraq.html#importation-du-module-modalis">Importation du module <em>modalis</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/barraq.html#ecoute-de-la-totalite-de-l-enregistrement-segmente-en-six-phrases">Écoute de la totalité de l&#8217;enregistrement segmenté en six phrases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/barraq.html#analyse-de-la-premiere-phrase">Analyse de la première phrase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#creation-de-l-instance">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#parametres-melodiques-principaux">Paramètres mélodiques principaux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#dessiner-la-courbe-melodique">Dessiner la courbe mélodique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#calculer-et-afficher-la-courbe-pdf-probability-density-function-avec-ses-pics">Calculer et afficher la courbe PDF (Probability Density Function) avec ses pics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#obtenir-l-echelle">Obtenir l&#8217;échelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">Dessiner la courbe mélodique en intégrant les intervalles calculés</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/barraq.html#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#id1">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/barraq.html#matrice-des-distances-classement-hierarchique">Matrice des distances / classement hiérarchique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/quatre_chants.html">Quatre variantes d&#8217;un chant de femmes du sud-est tunisien</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#ecoute-des-versions">Écoute des versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#analyse-et-affichage-des-pdf-s">Analyse et affichage des PDF-s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#transposition-des-frequences">Transposition des fréquences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#matrice-des-distances-et-groupement-hierarchique">Matrice des distances et groupement hiérarchique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/quatre_chants.html#extraction-des-echelles">Extraction des échelles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../API.html">API Reference</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">music22</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Code du module</a> &raquo;</li>
+      
+    <li>music22.core</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Code source de music22.core</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Core : Functions useful for all the package.</span>
+<span class="sd">--------------------------------------------</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span><span class="o">,</span><span class="nn">time</span><span class="o">,</span><span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">makedirs</span>
+<span class="kn">from</span> <span class="nn">music22</span> <span class="kn">import</span> <span class="n">audio</span>
+
+<div class="viewcode-block" id="file"><a class="viewcode-back" href="../../core.html#music22.core.file">[docs]</a><span class="k">class</span> <span class="nc">file</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;A class to manage files.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        path (str) : absolute path of a file.</span>
+<span class="sd">    </span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        path (str) : The path of the file.</span>
+<span class="sd">        basename (str) : The name of the file.</span>
+<span class="sd">        dirname (str) : The directory path of the file.</span>
+<span class="sd">        name (str) : The name of the file.</span>
+<span class="sd">        extension (str) : The extension of the file.</span>
+<span class="sd">    </span>
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; audio = &quot;/Users/anas/Barraq/AUDIO/P0.wav&quot;</span>
+<span class="sd">        &gt;&gt;&gt; A = file(audio)</span>
+<span class="sd">        &gt;&gt;&gt; print A.path</span>
+<span class="sd">        /Users/anas/Barraq/AUDIO/P0.wav</span>
+<span class="sd">        &gt;&gt;&gt; print A.basename</span>
+<span class="sd">        P0.wav</span>
+<span class="sd">        &gt;&gt;&gt; print A.dirname</span>
+<span class="sd">        /Users/anas/Barraq/AUDIO</span>
+<span class="sd">        &gt;&gt;&gt; print A.name</span>
+<span class="sd">        P0</span>
+<span class="sd">        &gt;&gt;&gt; print A.extension</span>
+<span class="sd">        wav</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">path</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_exist</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_names</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">&#39;[File: </span><span class="si">%s</span><span class="s">]&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_check_exist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)):</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&quot;ERROR: File </span><span class="si">%s</span><span class="s"> does not exist or is not readable !&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_set_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">basename</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dirname</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basename</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extension</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">basename</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+             </div>
+<div class="viewcode-block" id="wavfile"><a class="viewcode-back" href="../../core.html#music22.core.wavfile">[docs]</a><span class="k">class</span> <span class="nc">wavfile</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A class to manage audio files (.wav).&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">path</span><span class="p">):</span>
+        <span class="nb">file</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_extension</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">&#39;[WavFile: </span><span class="si">%s</span><span class="s">]&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">_check_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span> <span class="o">==</span> <span class="s">&#39;wav&#39;</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">&quot;Instance created with the audio file :&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">basename</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">print</span> <span class="s">&quot;ERROR: The file does not seem to be an audio .wav file !&quot;</span>
+
+<div class="viewcode-block" id="wavfile.pitch_extract"><a class="viewcode-back" href="../../core.html#music22.core.wavfile.pitch_extract">[docs]</a>    <span class="k">def</span> <span class="nf">pitch_extract</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Extracts the fundamental frequencies (f0).</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            self.wav_path (str) : a path to a .wav file.</span>
+<span class="sd">        Return:</span>
+<span class="sd">            self.txt_path (str) : a path to a .txt file contraing a list of frequencies.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">print</span> <span class="s">&#39;Extraction of f0 from &#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+        <span class="n">pitch</span> <span class="o">=</span> <span class="n">audio</span><span class="o">.</span><span class="n">pitch_extract</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">pitch</span><span class="p">[</span><span class="n">pitch</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">nan</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">makedirs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dirname</span><span class="o">+</span><span class="s">&#39;/f0/&#39;</span><span class="p">)</span>
+            <span class="k">print</span> <span class="s">&#39;Folder f0/ in&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dirname</span><span class="p">,</span> <span class="s">&#39;created.&#39;</span>
+        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="n">numpy</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dirname</span><span class="o">+</span><span class="s">&#39;/f0/&#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s">&#39;.txt&#39;</span><span class="p">,</span><span class="n">pitch</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s">&#39;</span><span class="si">%1.3f</span><span class="s">&#39;</span><span class="p">)</span>
+    
+        <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">print</span> <span class="s">&#39;File&#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">basename</span><span class="p">,</span><span class="s">&#39;analysed in &#39;</span><span class="p">,</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">,</span><span class="s">&#39; seconds&#39;</span>
+
+    </div></div>
+<div class="viewcode-block" id="f0file"><a class="viewcode-back" href="../../core.html#music22.core.f0file">[docs]</a><span class="k">class</span> <span class="nc">f0file</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A class to manage data files (.txt).&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">path</span><span class="p">):</span>
+        <span class="nb">file</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_check_extension</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">&#39;[TxtFile: </span><span class="si">%s</span><span class="s">]&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">_check_extension</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span> <span class="o">==</span> <span class="s">&#39;txt&#39;</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">&quot;Instance created with the txt file :&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">basename</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">print</span> <span class="s">&quot;ERROR: The file does not seem to be a text .txt file !&quot;</span>
+
+<div class="viewcode-block" id="f0file.get_data"><a class="viewcode-back" href="../../core.html#music22.core.f0file.get_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="f0file.clean_data"><a class="viewcode-back" href="../../core.html#music22.core.f0file.clean_data">[docs]</a>    <span class="k">def</span> <span class="nf">clean_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove zeros or NaNs in the list.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            L (numpy.ndarray) : A numpy list.</span>
+<span class="sd">        Return:</span>
+<span class="sd">            L (numpy.ndarray) : A `cleaned` numpy list.&quot;&quot;&quot;</span>
+        <span class="n">cleaned_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)]</span> <span class="c"># Remove zeros, if any</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clean_data</span> <span class="o">=</span> <span class="n">cleaned_data</span><span class="p">[</span><span class="o">~</span><span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">cleaned_data</span><span class="p">)]</span> <span class="c"># Remove NaNs, if any</span>
+        </div></div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">doctest</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Anas Ghrab.
+      Mis à jour le Sep 11, 2015.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

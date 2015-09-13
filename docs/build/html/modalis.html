@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Modalis API &mdash; documentation music22 0.0.2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation music22 0.0.2" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> music22
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro_python.html">Introduction à Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Tutoriels and exemples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/barraq.html"><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/barraq.html#importation-du-module-modalis">Importation du module <em>modalis</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/barraq.html#ecoute-de-la-totalite-de-l-enregistrement-segmente-en-six-phrases">Écoute de la totalité de l&#8217;enregistrement segmenté en six phrases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/barraq.html#analyse-de-la-premiere-phrase">Analyse de la première phrase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#creation-de-l-instance">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#parametres-melodiques-principaux">Paramètres mélodiques principaux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#dessiner-la-courbe-melodique">Dessiner la courbe mélodique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#calculer-et-afficher-la-courbe-pdf-probability-density-function-avec-ses-pics">Calculer et afficher la courbe PDF (Probability Density Function) avec ses pics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#obtenir-l-echelle">Obtenir l&#8217;échelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">Dessiner la courbe mélodique en intégrant les intervalles calculés</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="examples/barraq.html#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#id1">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/barraq.html#matrice-des-distances-classement-hierarchique">Matrice des distances / classement hiérarchique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples/quatre_chants.html">Quatre variantes d&#8217;un chant de femmes du sud-est tunisien</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#ecoute-des-versions">Écoute des versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#analyse-et-affichage-des-pdf-s">Analyse et affichage des PDF-s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#transposition-des-frequences">Transposition des fréquences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#matrice-des-distances-et-groupement-hierarchique">Matrice des distances et groupement hiérarchique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/quatre_chants.html#extraction-des-echelles">Extraction des échelles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="API.html">API Reference</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">music22</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Modalis API</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/modalis.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/Users/anas/python/music22/doc/source/modalis.rst</tt>, line 2)</p>
+Field list ends without a blank line; unexpected unindent.</div>
+<hr class="docutils" />
+<div class="section" id="module-music22.modalis">
+<span id="modalis-api"></span><h1>Modalis API<a class="headerlink" href="#module-music22.modalis" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="modalis-basics-of-modality">
+<h2>Modalis: Basics of Modality<a class="headerlink" href="#modalis-basics-of-modality" title="Lien permanent vers ce titre">¶</a></h2>
+<p>The module <strong>modalis</strong> focuses on the fundamental elements of modality in a melody. Its defines a Melodie class for getting :</p>
+<ul>
+<li><dl class="first docutils">
+<dt>The Dominant <span class="classifier-delimiter">:</span> <span class="classifier">It is based on :</span></dt>
+<dd><p class="first last">** The most present frequency (Todo).
+** The most probable frequency.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="class">
+<dt id="music22.modalis.melodia">
+<em class="property">class </em><code class="descclassname">music22.modalis.</code><code class="descname">melodia</code><span class="sig-paren">(</span><em>file_path</em>, <em>transpose='No'</em>, <em>freqref=300</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#melodia"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.melodia" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Create the melodia object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>path to a list of frequencies (f0) in a .txt file.</strong> (<em>A</em>) &#8211; </td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt>
+<code class="descname">All attributes from music22.core.f0file.</code></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="music22.modalis.melodia.clean_freqs">
+<code class="descname">clean_freqs</code><a class="headerlink" href="#music22.modalis.melodia.clean_freqs" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p><em>numpy.ndarray</em></p>
+<p>The list of frequencies without Zeros neither NaNs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="music22.modalis.melodia.pdf">
+<code class="descname">pdf</code><a class="headerlink" href="#music22.modalis.melodia.pdf" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p><em>numpy.ndarray</em></p>
+<p>The Probability Density Function on the range 0-500 Hz.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">xpeaks, xpeaks</code></dt>
+<dd><p><em>numpy.ndarray</em></p>
+<p>the Peaks of the PDF and their values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="music22.modalis.melodia.ordredpeaks">
+<code class="descname">ordredpeaks</code><a class="headerlink" href="#music22.modalis.melodia.ordredpeaks" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p><em>pandas.core.frame.DataFrame</em></p>
+<p>The Peaks ordered by their probability.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="music22.modalis.melodia.dominante">
+<code class="descname">dominante</code><a class="headerlink" href="#music22.modalis.melodia.dominante" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p><em>numpy.float64</em></p>
+<p>the dominant frequency.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="music22.modalis.melodia.intervals">
+<code class="descname">intervals</code><a class="headerlink" href="#music22.modalis.melodia.intervals" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p><em>pandas.core.series.Series</em></p>
+<p>the list of intervals in the choosen Unit (default is <cite>savarts</cite>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="music22.modalis.melodia.scale">
+<code class="descname">scale</code><a class="headerlink" href="#music22.modalis.melodia.scale" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p><em>list</em></p>
+<p>the Scale from the Dominant, compared to reference epimoric intervals.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="music22.modalis.melodia.pdf_show">
+<code class="descname">pdf_show</code><a class="reference internal" href="_modules/music22/modalis.html#melodia.pdf_show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.melodia.pdf_show" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p><em>matplotlibfigure</em></p>
+<p>the PDF plot with peaks.</p>
+</dd></dl>
+
+<p class="rubric">Example</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">music22.modalis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">file</span> <span class="o">=</span> <span class="s">&#39;/Users/anas/AUDIO/Barraq/P1.wav&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Barraq</span> <span class="o">=</span> <span class="n">music22</span><span class="o">.</span><span class="n">modalis</span><span class="o">.</span><span class="n">melodia</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+<span class="go">Instance created with the txt file : P1.wav</span>
+<span class="go">Instance created with the txt file : P1.txt</span>
+<span class="go">The detected tonic is 167.696 Hz.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Barraq</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">basename</span>
+<span class="go">&#39;P1.txt&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Barraq</span><span class="o">.</span><span class="n">freqs</span>
+<span class="go">array([ nan,  nan,  nan, ...,  nan,  nan,  nan])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Barraq</span><span class="o">.</span><span class="n">clean_freqs</span>
+<span class="go">array([ 155.564,  157.372,  160.123, ...,  159.201,  158.284,  156.466])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Barraq</span><span class="o">.</span><span class="n">tonique</span>
+<span class="go">167.696</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Barraq</span><span class="o">.</span><span class="n">pdf</span>
+<span class="go">array([  1.55304474e-33,   5.65209492e-33,   2.03065388e-32,</span>
+<span class="go">         7.20217980e-32,   2.52170476e-31,   8.71620406e-31,</span>
+<span class="go">         [...]</span>
+<span class="go">         8.53621504e-26,   2.80105445e-26,   9.07308675e-27,</span>
+<span class="go">         2.90111852e-27,   9.15698236e-28])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Barraq</span><span class="o">.</span><span class="n">pdf_show</span>
+<span class="go">&lt;bound method melodia.pdf_show of &lt;music22.modalis.melodia object at 0x102a32910&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Barraq</span><span class="o">.</span><span class="n">ordredpeaks</span>
+<span class="go">       xpeaks    ypeaks</span>
+<span class="go">1  243.486974  0.012244</span>
+<span class="go">0  201.402806  0.007772</span>
+<span class="go">3  324.649299  0.003007</span>
+<span class="go">2  278.557114  0.002709</span>
+<span class="go">4  375.751503  0.000785</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="music22.modalis.melodia.get_scale">
+<code class="descname">get_scale</code><span class="sig-paren">(</span><em>reference='tonic'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#melodia.get_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.melodia.get_scale" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Get the scale of the melody.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>reference</strong> (<em>float</em>) &#8211; the reference frequencies to calculate the scale. It could be the _tonic_ (self.tonique) or the _domin_ (self.dominante)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><strong>self.intervals</strong> &#8211;
+the intervals in the the choosen linear Unit.
+self.scale (): The scale compared to reference intervals.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type retourné:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="music22.modalis.melodia.get_tonique">
+<code class="descname">get_tonique</code><span class="sig-paren">(</span><em>percent=0.5</em>, <em>method='pdf'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#melodia.get_tonique"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.melodia.get_tonique" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Get the tonic of a melody.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>percent</strong> (<em>float</em>) &#8211; the percentage of the last considered frequencies.</li>
+<li><strong>method</strong> (<em>str</em>) &#8211; The method to be used for the analysis : &#8220;pdf&#8221; or &#8220;mode&#8221;.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><p class="first"><strong>tonic</strong> &#8211;
+The detected tonic.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">pdf_show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#melodia.pdf_show"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Show the pdf.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="music22.modalis.melodia.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>peaks='No'</em>, <em>width=12</em>, <em>height=6</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#melodia.plot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.melodia.plot" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Plots the melody frequencies</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first last simple">
+<li><strong>peaks</strong> (<em>boolean, optional</em>) &#8211; Draw the peak-lines. Default=&#8221;Yes&#8221;</li>
+<li><strong>width</strong> (<em>int,optional</em>) &#8211; width of the figure. Default = 12</li>
+<li><strong>height</strong> (<em>int,optional</em>) &#8211; height of the figure. Default = 6</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="music22.modalis.melodies">
+<em class="property">class </em><code class="descclassname">music22.modalis.</code><code class="descname">melodies</code><span class="sig-paren">(</span><em>path</em>, <em>transpose='No'</em>, <em>freqref=300</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#melodies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.melodies" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>This class defines a set of <cite>melodia</cite>-a and compares them.</p>
+<dl class="method">
+<dt id="music22.modalis.melodies.corr">
+<code class="descname">corr</code><span class="sig-paren">(</span><em>metric='KL'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#melodies.corr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.melodies.corr" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Calculate distances between PDFs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>self.melodies.pdf</strong> (<em>list</em>) &#8211; list of pdf lists.</li>
+<li><strong>metric</strong> (<em>str</em>) &#8211; the metric method : euclidian, KL (Kullback-Leibler). Default is KL.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><p class="first last">self.distances</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="music22.modalis.melodies.matrix">
+<code class="descname">matrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#melodies.matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.melodies.matrix" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Plot the matrix and heatmap of PDFS.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="music22.modalis.melodies.pdf_show">
+<code class="descname">pdf_show</code><span class="sig-paren">(</span><em>width=12</em>, <em>height=6</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#melodies.pdf_show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.melodies.pdf_show" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="music22.modalis.transmode">
+<code class="descclassname">music22.modalis.</code><code class="descname">transmode</code><span class="sig-paren">(</span><em>freqlist</em>, <em>freqref=300</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/music22/modalis.html#transmode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#music22.modalis.transmode" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Transpose all the frequencies by setting the _mode_ on a given reference frequency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>freqlist</strong> (<em>numpy.array</em>) &#8211; A list of frequencies to be transposed.</li>
+<li><strong>freqref</strong> (<em>int</em>) &#8211; The frequency reference to be transposed to. Default = 300.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><p class="first"><strong>transfreq</strong> &#8211;
+a list of the transposed frequencies.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/Users/anas/python/music22/doc/source/modalis.rst</tt>, line 11)</p>
+don&#8217;t know which module to import for autodocumenting u&#8217;__init__&#8217; (try placing a &#8220;module&#8221; or &#8220;currentmodule&#8221; directive in the document, or giving an explicit module name)</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Anas Ghrab.
+      Mis à jour le Sep 11, 2015.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>music22.diastema.scale &mdash; music22 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="music22 0.0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="music22.diastema" href="../diastema.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">music22 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../diastema.html" accesskey="U">music22.diastema</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for music22.diastema.scale</h1><div class="highlight"><pre>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Analysis of the scale of a melody.</span>
+
+<span class="sd">This module analyses the scale of a melody as a Probability Density Function.</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.stats.kde</span> <span class="kn">import</span> <span class="n">gaussian_kde</span>
+<span class="kn">from</span> <span class="nn">scipy.stats.mstats</span> <span class="kn">import</span> <span class="n">mode</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">pdist</span><span class="p">,</span> <span class="n">squareform</span>
+<span class="kn">from</span> <span class="nn">scipy.cluster.hierarchy</span> <span class="kn">import</span> <span class="n">linkage</span><span class="p">,</span><span class="n">dendrogram</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">log10</span>
+
+<span class="kn">import</span> <span class="nn">glob</span><span class="o">,</span> <span class="nn">os.path</span><span class="o">,</span> <span class="nn">time</span><span class="o">,</span> <span class="nn">os</span>
+
+<div class="viewcode-block" id="Melodie"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie">[docs]</a><span class="k">class</span> <span class="nc">Melodie</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;A class to define a melody and its features</span>
+
+<span class="sd">	:params Audio file to be analysed or a text file containing frequencies to be analysed</span>
+<span class="sd">	:return An object Melodie containing ...</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+		
+<div class="viewcode-block" id="Melodie.__init__"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.__init__">[docs]</a>	<span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">file</span><span class="p">,</span>
+				<span class="n">xmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+				<span class="n">minFrequency</span><span class="o">=</span><span class="mi">55</span><span class="p">,</span> <span class="n">maxFrequency</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+				<span class="n">freqref</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bw_method</span><span class="o">=.</span><span class="mi">1</span><span class="p">,</span>
+				<span class="n">percent</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;mode&quot;</span><span class="p">,</span>
+				<span class="n">transpose</span> <span class="o">=</span> <span class="s">&quot;No&quot;</span><span class="p">,</span><span class="n">transpositionref</span> <span class="o">=</span> <span class="s">&quot;mode&quot;</span><span class="p">,</span>
+				<span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">file_path</span> <span class="o">=</span> <span class="nb">file</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">folder_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s">&#39;/&#39;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">file_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">file_label</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">file_exten</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+		
+		<span class="bp">self</span><span class="o">.</span><span class="n">minFrequency</span> <span class="o">=</span> <span class="n">minFrequency</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">maxFrequency</span> <span class="o">=</span> <span class="n">maxFrequency</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">percent</span> <span class="o">=</span> <span class="n">percent</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">freqref</span> <span class="o">=</span> <span class="n">freqref</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">transpose</span> <span class="o">=</span> <span class="n">transpose</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">transpositionref</span> <span class="o">=</span> <span class="n">transpositionref</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">bw_method</span> <span class="o">=</span> <span class="n">bw_method</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">xmin</span> <span class="o">=</span> <span class="n">xmin</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">xmax</span> <span class="o">=</span> <span class="n">xmax</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xmin</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">xmax</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">xmax</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">xmin</span><span class="p">)</span>			
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">frequences</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">n_frames</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frequences</span><span class="p">)</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">freq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">frequences</span><span class="p">[</span><span class="o">~</span><span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frequences</span><span class="p">)]</span>
+		<span class="c">#self.fmin = min(self.freq)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">fmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">fmean</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">fstd</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">)</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_exten</span> <span class="o">==</span> <span class="s">&#39;txt&#39;</span><span class="p">:</span>
+            			<span class="bp">self</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_exten</span> <span class="o">==</span> <span class="s">&#39;wav&#39;</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">file_pitch_extract</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Melodie.__str__"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.__str__">[docs]</a>	<span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">return</span> <span class="s">&quot;File : </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Melodie.analyse"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.analyse">[docs]</a>	<span class="k">def</span> <span class="nf">analyse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+	   <span class="sd">&quot;&quot;&quot;Analyse : gets the peaks of the pdf.&quot;&quot;&quot;</span>
+	   <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transpose</span><span class="o">==</span><span class="s">&quot;Yes&quot;</span><span class="p">:</span>
+	       <span class="bp">self</span><span class="o">.</span><span class="n">freqtransmode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transmode</span><span class="p">()</span>
+	       <span class="k">print</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span><span class="s">&quot;(transposed)&quot;</span>
+	       <span class="bp">self</span><span class="o">.</span><span class="n">pdf</span> <span class="o">=</span> <span class="n">gaussian_kde</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqtransmode</span><span class="p">[</span><span class="o">~</span><span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqtransmode</span><span class="p">)],</span><span class="bp">self</span><span class="o">.</span><span class="n">bw_method</span><span class="p">)</span>
+	   <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transpose</span><span class="o">==</span><span class="s">&quot;No&quot;</span><span class="p">:</span>
+	       <span class="k">print</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span><span class="s">&quot;(not transposed)&quot;</span>
+	       <span class="bp">self</span><span class="o">.</span><span class="n">pdf</span> <span class="o">=</span> <span class="n">gaussian_kde</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">[</span><span class="o">~</span><span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">)],</span><span class="bp">self</span><span class="o">.</span><span class="n">bw_method</span><span class="p">)</span>
+	   <span class="bp">self</span><span class="o">.</span><span class="n">pdf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+	   
+	   <span class="bp">self</span><span class="o">.</span><span class="n">peaks</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Melodie.pdf"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.pdf">[docs]</a>	<span class="k">def</span> <span class="nf">pdf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Estime la densite de probabilite</span>
+
+<span class="sd">		Parameters</span>
+<span class="sd">		----------</span>
+<span class="sd">		x : array_like</span>
+
+<span class="sd">		Returns</span>
+<span class="sd">		-------</span>
+<span class="sd">		y : array_like</span>
+<span class="sd">	    	Returns a ....</span>
+
+<span class="sd">	    &quot;&quot;&quot;</span>
+
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pdf</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="Melodie.pdf_show"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.pdf_show">[docs]</a>	<span class="k">def</span> <span class="nf">pdf_show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+	 	<span class="sd">&quot;&quot;&quot;Affichage de la fonction de la densite de probabilite&quot;&quot;&quot;</span>
+
+		<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">pdf</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">alpha</span><span class="o">=.</span><span class="mi">6</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">file_label</span><span class="p">)</span>
+		<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peaks</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">peakspdf</span><span class="p">,</span> <span class="s">&quot;ro&quot;</span><span class="p">)</span>
+		<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peaks</span><span class="p">)):</span>
+			<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+					<span class="s">&quot;</span><span class="si">%.2f</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">peaks</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+					<span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peaks</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">peakspdf</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+					<span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peaks</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peakspdf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mf">0.0001</span><span class="p">)))</span>
+		<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="Melodie.peaks"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.peaks">[docs]</a>	<span class="k">def</span> <span class="nf">peaks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;Obtenir les Peaks du PDF.&quot;&quot;&quot;</span>
+		<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pdf</span><span class="p">)))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> <span class="c"># local max</span>
+
+		<span class="bp">self</span><span class="o">.</span><span class="n">peaks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">peakspdf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pdf</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+		<span class="n">c1</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peaks</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+		<span class="n">c2</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">peakspdf</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+		<span class="n">c</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">])</span>
+		<span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+		<span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="n">c</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">argsort</span><span class="p">()]</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">ordredpeaks</span> <span class="o">=</span> <span class="n">c</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordredpeaks</span>
+</div>
+<div class="viewcode-block" id="Melodie.transmode"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.transmode">[docs]</a>	<span class="k">def</span> <span class="nf">transmode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+	 	<span class="sd">&quot;&quot;&quot;Transpose all the frequencies by setting the mode on a given reference frequency</span>
+
+<span class="sd">	 	:params freqref : The frequency reference to be transposed to. Default = 300 ?</span>
+<span class="sd">	 	ref : The note reference : mode or tonic. Default = mode</span>
+<span class="sd">	 	: return the transposed frequencies</span>
+<span class="sd">	 	&quot;&quot;&quot;</span>
+
+	 	<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transpositionref</span><span class="o">==</span><span class="s">&quot;mode&quot;</span><span class="p">:</span>
+		 	<span class="n">interv_transpo</span> <span class="o">=</span> <span class="n">mode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">freqref</span>
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transpositionref</span><span class="o">==</span><span class="s">&quot;tonic&quot;</span><span class="p">:</span>
+			<span class="n">T</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tonique</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">percent</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+			<span class="k">print</span> <span class="s">&quot;Tonic :&quot;</span><span class="p">,</span><span class="n">T</span>
+			<span class="k">if</span> <span class="n">T</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">freqref</span> <span class="p">:</span>
+				<span class="n">interv_transpo</span> <span class="o">=</span> <span class="n">T</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">freqref</span>
+			<span class="k">if</span> <span class="n">T</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">freqref</span> <span class="p">:</span>
+				<span class="n">interv_transpo</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freqref</span><span class="o">/</span><span class="n">T</span>
+		<span class="k">print</span> <span class="s">&quot;Intervalle de tranposition :&quot;</span><span class="p">,</span><span class="n">interv_transpo</span>
+	 	<span class="bp">self</span><span class="o">.</span><span class="n">freqtransposed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq</span> <span class="o">/</span> <span class="n">interv_transpo</span>
+	 	<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">freqtransposed</span>
+</div>
+<div class="viewcode-block" id="Melodie.tonique"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.tonique">[docs]</a>	<span class="k">def</span> <span class="nf">tonique</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">percent</span><span class="p">,</span><span class="n">method</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Get the tonic frequency defined as the mode of the last frequencies array.</span>
+<span class="sd">		These as selected by the percent argument. Two methods are possible : pdf or mode.</span>
+<span class="sd">		</span>
+<span class="sd">		Input :</span>
+<span class="sd">		-----------</span>
+<span class="sd">			percent (optional) : a percentage of the number of frames from the total size</span>
+<span class="sd">			of the frequencies array to give the last frequencies. Default percent= 8</span>
+<span class="sd">		</span>
+<span class="sd">		Output :</span>
+<span class="sd">		-----------</span>
+
+<span class="sd">			M : the mode</span>
+<span class="sd">			N : the mode converted inside an octave</span>
+<span class="sd">			Final_Freqs : the last frequencies according to the percentage</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">percent</span> <span class="o">=</span> <span class="n">percent</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
+
+		<span class="n">L</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">)</span>
+		<span class="n">Nb_Frames</span> <span class="o">=</span> <span class="n">L</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">percent</span><span class="o">/</span><span class="mi">100</span>
+		<span class="n">Final_Freqs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">[(</span><span class="n">L</span><span class="o">-</span><span class="n">Nb_Frames</span><span class="p">):</span><span class="n">L</span><span class="p">]</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="o">==</span><span class="s">&quot;pdf&quot;</span><span class="p">:</span>
+			<span class="c"># Down to the same octave centered on the mode</span>
+			<span class="c">#Final_Freqs[Final_Freqs&gt;mode(self.freq)[0]*2] = Final_Freqs[Final_Freqs&gt;mode(self.freq)[0]*2]/2.</span>
+			<span class="c">#Final_Freqs[Final_Freqs&lt;(mode(self.freq)[0]/2.)] = Final_Freqs[Final_Freqs&lt;mode(self.freq)[0]/2.]*2</span>
+
+			<span class="bp">self</span><span class="o">.</span><span class="n">final_pdf</span> <span class="o">=</span> <span class="n">gaussian_kde</span><span class="p">(</span><span class="n">Final_Freqs</span><span class="p">)</span>
+			<span class="n">lmax</span><span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">final_pdf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">))</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">xmin</span>
+			<span class="c">#plt.plot(self.x,self.final_pdf(self.x))</span>
+			<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">final_pdf</span><span class="p">,</span><span class="n">lmax</span><span class="p">,</span><span class="n">Final_Freqs</span>
+
+		<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="o">==</span><span class="s">&quot;mode&quot;</span><span class="p">:</span>
+			<span class="n">M</span> <span class="o">=</span> <span class="n">mode</span><span class="p">(</span><span class="n">Final_Freqs</span><span class="p">)</span>
+			<span class="k">if</span> <span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">mode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="p">:</span>
+				<span class="n">N</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span>
+			<span class="k">if</span> <span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">mode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">:</span>
+				<span class="n">N</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span>
+			<span class="k">else</span><span class="p">:</span>
+				<span class="n">N</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+			<span class="k">return</span> <span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="nb">int</span><span class="p">(</span><span class="n">N</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span><span class="n">Final_Freqs</span>
+</div>
+<div class="viewcode-block" id="Melodie.get_intervals"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.get_intervals">[docs]</a>	<span class="k">def</span> <span class="nf">get_intervals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">percent</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;mode&quot;</span><span class="p">,</span><span class="n">unit</span><span class="o">=</span><span class="s">&quot;savart&quot;</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Converts the frequencies into a linear space</span>
+
+<span class="sd">		Input :</span>
+<span class="sd">		-----------</span>
+<span class="sd">			percent (optional) : percent from the last frequencies to take in consideration. Default = 0.5%</span>
+<span class="sd">			method (optional) : Two available methods : _pdf_ and _mode_. Default = mode</span>
+<span class="sd">			unit (optional) : the Unit to use : savart of cent. Default = savart.</span>
+<span class="sd">		</span>
+<span class="sd">		Output :</span>
+<span class="sd">		-----------</span>
+<span class="sd">			self.intervals : the intervals in the choosen unit.</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">intervals</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s">&quot;savart&quot;</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">intervals</span> <span class="o">=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ordredpeaks</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">tonique</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span><span class="n">method</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span><span class="o">*</span><span class="mi">1000</span>
+		<span class="k">if</span> <span class="n">unit</span> <span class="o">==</span> <span class="s">&quot;cent&quot;</span><span class="p">:</span>
+			<span class="bp">self</span><span class="o">.</span><span class="n">intervals</span> <span class="o">=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ordredpeaks</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">tonique</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span><span class="n">method</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span><span class="o">*</span><span class="mi">1200</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">intervals</span>
+</div>
+<div class="viewcode-block" id="Melodie.plot"><a class="viewcode-back" href="../../../diastema/scale.html#music22.diastema.scale.Melodie.plot">[docs]</a>	<span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">		Plots the melody frequencies</span>
+
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="c"># Visualize output pitch values</span>
+		<span class="n">hopSize</span> <span class="o">=</span> <span class="mi">128</span>
+		<span class="n">frameSize</span> <span class="o">=</span> <span class="mi">2048</span>
+		<span class="n">sampleRate</span> <span class="o">=</span> <span class="mi">44100</span>
+
+		<span class="n">n_frames</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_frames</span>
+		<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+		<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_frames</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">frequences</span><span class="p">,</span> <span class="s">&#39;bo&#39;</span><span class="p">)</span>
+		<span class="n">n_ticks</span> <span class="o">=</span> <span class="mi">10</span>
+		<span class="n">xtick_locs</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="n">n_frames</span> <span class="o">/</span> <span class="mf">10.0</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_ticks</span><span class="p">)]</span>
+		<span class="n">xtick_lbls</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="n">n_frames</span> <span class="o">/</span> <span class="mf">10.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">hopSize</span> <span class="o">/</span> <span class="n">sampleRate</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_ticks</span><span class="p">)]</span>
+		<span class="n">xtick_lbls</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;</span><span class="si">%.2f</span><span class="s">&quot;</span> <span class="o">%</span> <span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xtick_lbls</span><span class="p">]</span>
+		<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">xtick_locs</span><span class="p">,</span> <span class="n">xtick_lbls</span><span class="p">)</span>
+		<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+		<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">&#39;Time (s)&#39;</span><span class="p">)</span>
+		<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">&#39;Pitch (Hz)&#39;</span><span class="p">)</span>
+		<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_label</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">music22 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../diastema.html" >music22.diastema</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Anas Ghrab.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>
