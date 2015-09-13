@@ -39,12 +39,12 @@ sonore ``P0.wav`` se trouve dans le dossier ayant pour chemin (*path*)
 
 .. [#] Il s'agit d'une *qaṣidā/ibtihāl* : *ʿomrī ʿalayka tašawwuqan qaḍḍaytuhu* (عمري عليك تشوّقا قضّيته). 
 
-Nous procédons comme suit :
+Pour ce tutoriel, nous procédons comme suit :
 
--  Commandes préliminaires
--  Écoute des des phrases segmentées
--  Commandes pour l'analyse d'une seule mélodie (la première phrase)
--  Commandes pour l'analyse et la comparaison de plusieurs phrases (les
+-  Présentation des commandes préliminaires;
+-  Écoute des des phrases segmentées;
+-  Présentation des commandes pour l'analyse d'une seule mélodie (la première phrase);
+-  Présentation des commandes pour l'analyse et la comparaison de plusieurs phrases (les
    six phrases qui composent l'extrait)
 
 Importation du module *modalis*
