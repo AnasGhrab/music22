@@ -99,15 +99,6 @@ d'édition sonore) en six phrases :
 
    </div>
 
-.. code:: python
-
-    %%html
-    
-    <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
-    src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_01/player/800x170'>
-    </iframe>
-
-
 
 .. raw:: html
 
@@ -144,14 +135,6 @@ d'édition sonore) en six phrases :
 
    </div>
 
-.. code:: python
-
-    %%html
-    <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
-    src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_02/player/800x170'>
-    </iframe>
-
-
 
 .. raw:: html
 
@@ -186,14 +169,6 @@ d'édition sonore) en six phrases :
 .. raw:: html
 
    </div>
-
-.. code:: python
-
-    %%html
-    <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
-    src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_03/player/800x170'>
-    </iframe>
-
 
 
 .. raw:: html
@@ -230,14 +205,6 @@ d'édition sonore) en six phrases :
 
    </div>
 
-.. code:: python
-
-    %%html
-    <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
-    src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_04/player/800x170'>
-    </iframe>
-
-
 
 .. raw:: html
 
@@ -273,14 +240,6 @@ d'édition sonore) en six phrases :
 
    </div>
 
-.. code:: python
-
-    %%html
-    <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
-    src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_05/player/800x170'>
-    </iframe>
-
-
 
 .. raw:: html
 
@@ -315,14 +274,6 @@ d'édition sonore) en six phrases :
 .. raw:: html
 
    </div>
-
-.. code:: python
-
-    %%html
-    <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
-    src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_06/player/800x170'>
-    </iframe>
-
 
 
 .. raw:: html

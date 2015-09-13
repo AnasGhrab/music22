@@ -22,3 +22,4 @@ Indices and tables
 * :ref:`search`
 
 .. _Python: http://www.python.org/
+.. _MIR: https://en.wikipedia.org/wiki/Music_information_retrieval
