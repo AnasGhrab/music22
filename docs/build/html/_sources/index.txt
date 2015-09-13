@@ -1,3 +1,5 @@
+.. _intro:
+
 Welcome to Music22's documentation!
 ===================================
 

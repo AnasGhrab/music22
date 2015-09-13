@@ -3,18 +3,18 @@
 =========================================================
 
 *Les commandes ci-dessous sont une introduction à l'utilisation pratique
-du package Music22 (v. 0.0.2). Il s'adresse à des utilisateurs sans
+du package* :ref:`Music22 <intro>`. *Il s'adresse à des utilisateurs sans
 connaissance préalable de la programmation, mais qui ont pris
-connaissance des :ref:`premières étapes de l'utilisation de Python <intro_python>` et ont :ref:`installé le package Music22 <install>`.*
+connaissance des* :ref:`premières étapes de l'utilisation de Python <intro_python>` *et ont* :ref:`installé le package Music22 <install>`.
 
-*L'explication musicologique et les commentaires liées à cette méthode
+*L'explication musicologique et les commentaires liés à cette méthode
 d'analyse ont été présentés lors de la rencontre sur les maqām-s et
 ṭubūʿ-s qui a eu lieu à l'université du Kaslik (Liban) le 19 juillet
 2015. Le texte de la présentation (en arabe) est en cours de
 publication.*
 
-L'enregistrement a été publié dans le premier volume de l'Initiation à
-la Musique Tunisienne (Snoussi, 1963/R-2003).
+*L'enregistrement utilisé ici fait partie du premier volume de l'Initiation à
+la Musique Tunisienne* (`Snoussi, 1963/R-2003 <http://www.cmam.tn/publication/fr/5/Initiation-a-la-Musique-Tunisienne.html?iframe=true&width=80%&height=100%>`_).
 
 .. raw:: html
 
@@ -32,11 +32,12 @@ la Musique Tunisienne (Snoussi, 1963/R-2003).
 
 --------------
 
-On se propose d'analyser un poème soufi (*qaṣidā : ʿomrī ʿalayka
-tašawwuqan qaḍḍaytuhu*), interprété par ʿAlī al-Barrāq. Son fichier
-sonore P0.wav se trouve dans le dossier ayant pour chemin (*path*)
-/Users/anas/AUDIO/Barraq/. il est segmenté en six fichiers
-(P1.wav-P6.wav) placés également dans le même dossier.
+On se propose d'analyser un chant soufi interprété par ʿAlī al-Barrāq [#]_ . Son fichier
+sonore ``P0.wav`` se trouve dans le dossier ayant pour chemin (*path*)
+``/Users/anas/AUDIO/Barraq/``. Il est segmenté en six fichiers
+(``P1.wav``-``P6.wav``) placés également dans le même dossier.
+
+.. [#] Il s'agit d'une *qaṣidā/ibtihāl* : *ʿomrī ʿalayka tašawwuqan qaḍḍaytuhu* (عمري عليك تشوّقا قضّيته). 
 
 Nous procédons comme suit :
 
