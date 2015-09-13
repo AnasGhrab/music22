@@ -5,8 +5,7 @@
 *Les commandes ci-dessous sont une introduction à l'utilisation pratique
 du package Music22 (v. 0.0.2). Il s'adresse à des utilisateurs sans
 connaissance préalable de la programmation, mais qui ont pris
-connaissance des premières étapes de l'utilisation de Python et on
-installé le package Music22.*
+connaissance des :ref:`premières étapes de l'utilisation de Python <intro_python>` et ont :ref:`installé le package Music22 <install>`.*
 
 *L'explication musicologique et les commentaires liées à cette méthode
 d'analyse ont été présentés lors de la rencontre sur les maqām-s et
@@ -99,7 +98,6 @@ d'édition sonore) en six phrases :
 
    </div>
 
-
 .. raw:: html
 
     
@@ -170,7 +168,6 @@ d'édition sonore) en six phrases :
 
    </div>
 
-
 .. raw:: html
 
     <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
@@ -204,7 +201,6 @@ d'édition sonore) en six phrases :
 .. raw:: html
 
    </div>
-
 
 .. raw:: html
 
@@ -240,7 +236,6 @@ d'édition sonore) en six phrases :
 
    </div>
 
-
 .. raw:: html
 
     <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
@@ -274,7 +269,6 @@ d'édition sonore) en six phrases :
 .. raw:: html
 
    </div>
-
 
 .. raw:: html
 
