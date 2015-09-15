@@ -32,19 +32,18 @@ la Musique Tunisienne* (`Snoussi, 1963/R-2003 <http://www.cmam.tn/publication/fr
 
 --------------
 
-On se propose d'analyser un chant soufi interprété par ʿAlī al-Barrāq [#]_ . Son fichier
-sonore ``P0.wav`` se trouve dans le dossier ayant pour chemin (*path*)
-``/Users/anas/AUDIO/Barraq/``. Il est segmenté en six fichiers
-(``P1.wav``-``P6.wav``) placés également dans le même dossier.
+On se propose d'analyser un poème soufi (*qaṣidā : ʿomrī ʿalayka
+tašawwuqan qaḍḍaytuhu*), interprété par ʿAlī al-Barrāq. Son fichier
+sonore P0.wav se trouve dans le dossier ayant pour chemin (*path*)
+/Users/anas/AUDIO/Barraq/. il est segmenté en six fichiers
+(P1.wav-P6.wav) placés également dans le même dossier.
 
-.. [#] Il s'agit d'une *qaṣidā/ibtihāl* : *ʿomrī ʿalayka tašawwuqan qaḍḍaytuhu* (عمري عليك تشوّقا قضّيته). 
+Nous procédons comme suit :
 
-Pour ce tutoriel, nous procédons comme suit :
-
--  Présentation des commandes préliminaires;
--  Écoute des des phrases segmentées;
--  Présentation des commandes pour l'analyse d'une seule mélodie (la première phrase);
--  Présentation des commandes pour l'analyse et la comparaison de plusieurs phrases (les
+-  Commandes préliminaires
+-  Écoute des des phrases segmentées
+-  Commandes pour l'analyse d'une seule mélodie (la première phrase)
+-  Commandes pour l'analyse et la comparaison de plusieurs phrases (les
    six phrases qui composent l'extrait)
 
 Importation du module *modalis*
@@ -134,7 +133,6 @@ d'édition sonore) en six phrases :
 
    </div>
 
-
 .. raw:: html
 
     <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
@@ -168,6 +166,7 @@ d'édition sonore) en six phrases :
 .. raw:: html
 
    </div>
+
 
 .. raw:: html
 
@@ -203,6 +202,7 @@ d'édition sonore) en six phrases :
 
    </div>
 
+
 .. raw:: html
 
     <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
@@ -236,6 +236,7 @@ d'édition sonore) en six phrases :
 .. raw:: html
 
    </div>
+
 
 .. raw:: html
 
@@ -271,6 +272,7 @@ d'édition sonore) en six phrases :
 
    </div>
 
+
 .. raw:: html
 
     <iframe width='815' height='300' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'
@@ -286,8 +288,8 @@ Création de l'instance
 
 On procèdera premièrement par la création d'une instance (« objet ») que
 nous nommons *barraq*. La création de l'instance se fait en indiquant le
-*path* du fichier à la classe :class:`music22.modalis.melodia` du module :mod:`music22.modalis` du package
-`music22`.
+*path* du fichier à la classe *melodia* du module *modalis* du package
+*music22*.
 
 .. code:: python
 
@@ -360,7 +362,7 @@ l'instance :
 
 .. parsed-literal::
 
-    166.46600000000001
+    166.466
 
 
 
@@ -460,15 +462,15 @@ d'appeler l'attribut *.scale*
 
 .. parsed-literal::
 
-    [('243.486973948', ('165.15', '3/2', '-', '10.94')),
-     ('201.402805611', ('82.74', '6/5', '+', '3.56')),
-     ('324.649298597', ('290.09', '2/1', '-', '10.94')),
-     ('278.557114228', ('223.59', '3/2*10/9', '+', '1.74')),
-     ('375.751503006', ('353.58', '2/1*9/8', '+', '1.39'))]
+    [('243.486973948', ('658.34', '3/2', '+', '43.61')),
+     ('201.402805611', ('329.83', '6/5', '+', '14.19')),
+     ('324.649298597', ('1156.39', '2/1', '+', '43.61')),
+     ('278.557114228', ('891.29', '3/2*10/9', '+', '6.94')),
+     ('375.751503006', ('1409.46', '2/1*9/8', '+', '5.55'))]
 
 
 
-(BUG à corriger : en *cent* les signes + et moins - ne sont pas pris en
+(BUG à corriger : en *cent* les signes + et - ne sont pas pris en
 considération).
 
 Dessiner la courbe mélodique en intégrant les intervalles calculés
@@ -501,7 +503,7 @@ Création de l'instance
 ~~~~~~~~~~~~~~~~~~~~~~
 
 La gestion de plusieurs mélodies/phrases s'effectue à travers la classe
-:class:`music22.modalis.melodies` du module :mod:`music22.modalis`.
+*melodies* du module *modalis*.
 
 .. code:: python
 

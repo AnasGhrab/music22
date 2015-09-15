@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quelle fréquence représenterait la tonique ? &mdash; documentation music22 0.0.2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation music22 0.0.2" href="../index.html"/>
+        <link rel="up" title="Tutoriels and exemples" href="../examples.html"/>
+        <link rel="next" title="API Reference" href="../API.html"/>
+        <link rel="prev" title="Quatre variantes d’un chant de femmes du sud-est tunisien" href="quatre_chants.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> music22
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro_python.html">Introduction à Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../examples.html">Tutoriels and exemples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="barraq.html"><em>Qaṣīda/Ibtihāl</em> par ʿAlī al-Barrāq (1891-1981, Kairouan)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="barraq.html#importation-du-module-modalis">Importation du module <em>modalis</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="barraq.html#ecoute-de-la-totalite-de-l-enregistrement-segmente-en-six-phrases">Écoute de la totalité de l&#8217;enregistrement segmenté en six phrases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="barraq.html#analyse-de-la-premiere-phrase">Analyse de la première phrase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#creation-de-l-instance">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#parametres-melodiques-principaux">Paramètres mélodiques principaux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#dessiner-la-courbe-melodique">Dessiner la courbe mélodique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#calculer-et-afficher-la-courbe-pdf-probability-density-function-avec-ses-pics">Calculer et afficher la courbe PDF (Probability Density Function) avec ses pics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#obtenir-l-echelle">Obtenir l&#8217;échelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">Dessiner la courbe mélodique en intégrant les intervalles calculés</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="barraq.html#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#id3">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
+<li class="toctree-l4"><a class="reference internal" href="barraq.html#matrice-des-distances-classement-hierarchique">Matrice des distances / classement hiérarchique</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="quatre_chants.html">Quatre variantes d&#8217;un chant de femmes du sud-est tunisien</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#ecoute-des-versions">Écoute des versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#analyse-et-affichage-des-pdf-s">Analyse et affichage des PDF-s</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#modification-des-frequences-limites">Modification des fréquences limites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#matrice-des-distances-et-groupement-hierarchique">Matrice des distances et groupement hiérarchique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#extraction-des-echelles">Extraction des échelles</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Quelle fréquence représenterait la tonique ?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#les-dernieres-frequences-d-une-melodie">Les dernières fréquences d&#8217;une mélodie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#la-frequence-tonique-parmi-les-dernieres-frequences">La fréquence tonique parmi les dernières fréquences</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../API.html">API Reference</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">music22</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../examples.html">Tutoriels and exemples</a> &raquo;</li>
+      
+    <li>Quelle fréquence représenterait la tonique ?</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="quelle-frequence-representerait-la-tonique">
+<h1>Quelle fréquence représenterait la tonique ?<a class="headerlink" href="#quelle-frequence-representerait-la-tonique" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Si nous concevons qu&#8217;une note musicale peut être représentée par une
+fréquence (La = 440 ?), et puisque musicalement nous définissons la
+tonique comme une note d&#8217;appui avec laquelle se termine la mélodie,
+alors, cette note devrait être représentée par la dernière fréquence
+d&#8217;une liste mélodique.</p>
+<p>Cependant, la réalité musicale et acoustique font qu&#8217;il n&#8217;est pas aussi
+évident de déterminer une fréquence représentative de la tonique, pour
+les raisons suivantes :</p>
+<ul class="simple">
+<li>La note n&#8217;est pas en réalité une fréquence, mais un ensemble de
+fréquences. Une meilleure représentation de la note serait une loi
+normale (<a class="reference external" href="https://fr.wikipedia.org/wiki/Loi_normale">https://fr.wikipedia.org/wiki/Loi_normale</a>) avec une
+fréquence centrale et un écart type;</li>
+<li>Si nous devons faire le d&#8217;une fréquence parmi les « dernières
+fréquences », comment déterminer celles-ci et sur quelle base faire
+ce choix ?</li>
+<li>Dans un contexte de voix nue, les dernières fréquences ont tendance à
+être chantée plus basse qu&#8217;à l&#8217;intérieur du chant.</li>
+</ul>
+<p>En utilisant music22, nous tenterons de mieux cerner le problème et nous
+verrons comment ajuster les paramètres liés à la détection de la
+tonique.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">music22.modalis</span> <span class="c"># Importation du module modalis</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&#39;/Users/anas/AUDIO/Barraq/f0/P1.txt&#39;</span>
+<span class="n">barraq1</span> <span class="o">=</span> <span class="n">music22</span><span class="o">.</span><span class="n">modalis</span><span class="o">.</span><span class="n">melodia</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c"># Création d&#39;une instance pour une seule mélodie</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>Instance created with the txt file : P1.txt
+</pre></div>
+</div>
+<p>Par défaut, l&#8217;attribut .tonique nous donne une fréquence représentative
+de la tonique :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">166.466</span>
+</pre></div>
+</div>
+<p>Avant de voir en détail les paramètres utilisés pour cette détection,
+observons la dernière fréquence de la liste :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">clean_freqs</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">array</span><span class="p">([</span> <span class="mf">155.564</span><span class="p">,</span>  <span class="mf">157.372</span><span class="p">,</span>  <span class="mf">160.123</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span>  <span class="mf">159.201</span><span class="p">,</span>  <span class="mf">158.284</span><span class="p">,</span>  <span class="mf">156.466</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Nous voyons que la dernière fréquence que nous donne l&#8217;algorithme
+utilisé pour la détection des fréquences fondamentales est la fréquence
+156.466 Hz, différente de la fréquence représentative analysée, 166.466
+Hz.</p>
+<div class="section" id="les-dernieres-frequences-d-une-melodie">
+<h2>Les dernières fréquences d&#8217;une mélodie<a class="headerlink" href="#les-dernieres-frequences-d-une-melodie" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est évident qu&#8217;on ne peut pas définir les dernières fréquences d&#8217;une
+mélodie par un nombre fixe dl&#8217;éléments (<em>les x dernières fréquences</em>)
+car toutes les mélodies n&#8217;ont pas la même longeur. On utilisera alors un
+pourcentage de toutes les fréquences de la mélodie. Pour avoir le
+pourcentage des dernières fréquences utilisées, il faut faire appel à
+l&#8217;attribut .percent.</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">percent</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">0.5</span>
+</pre></div>
+</div>
+<p>Pour la détection de la fréquence, par défaut, music22 utilisant les
+0.5% dernières fréquences. Varions ce pourcentage pour voir de quelle
+manière cela influe sur la fréquence détectée. On peut indiquer le
+pourcentage à utiliser lors de la création de l&#8217;instance :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">166.466</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">159.466</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">162.871</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">163.871</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">183.871</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">182.871</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">184.871</span>
+</pre></div>
+</div>
+<p>La fonction suivante nous permet d&#8217;obtenir ces résultats de manière plus
+automatisée :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">pourcentages</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>  <span class="c"># Liste des différents pourcentage à utiliser</span>
+<span class="n">toniques</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c"># Liste vide pour y placer les toniques détectées</span>
+<span class="k">for</span> <span class="n">pourcentage</span> <span class="ow">in</span> <span class="n">pourcentages</span><span class="p">:</span>
+    <span class="n">tonique</span> <span class="o">=</span> <span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">pourcentage</span><span class="p">)</span>
+    <span class="n">toniques</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span><span class="p">)</span> <span class="c"># On rajoute la tonique détectée dans la liste</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">toniques</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mf">159.466</span><span class="p">,</span> <span class="mf">166.466</span><span class="p">,</span> <span class="mf">162.871</span><span class="p">,</span> <span class="mf">163.871</span><span class="p">,</span> <span class="mf">183.871</span><span class="p">,</span> <span class="mf">182.871</span><span class="p">,</span> <span class="mf">184.871</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Nous voyons que dans cet exemple, jusqu&#8217;à 2% des dernières fréquences,
+la tonique détectée se trouve dans la zone entre 159.46 et 166.46 Hz.
+Avec les pourcentages 5, 7 et 10, elle devient dans la zone de 182 Hz,
+ce qui corresponderait à une autre note. Plusieurs exemples nous on
+amené à prendre la 0.5% comme valeur par défaut.</p>
+<p>Maintenant, on peut se poser la question, sur quelle base le choix de la
+tonique a-t-été effectué à partir de ces dernières fréquences ?</p>
+</div>
+<div class="section" id="la-frequence-tonique-parmi-les-dernieres-frequences">
+<h2>La fréquence tonique parmi les dernières fréquences<a class="headerlink" href="#la-frequence-tonique-parmi-les-dernieres-frequences" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Deux méthodes sont disponibles dans <code class="docutils literal"><span class="pre">music22</span></code> pour la détection de la
+tonique :</p>
+<ul class="simple">
+<li>La fréquence tonique pourrait être la fréquence la plus présente
+parmi les dernières fréquences : le mode (en termes statistiques);</li>
+<li>La fréquence pourrait être la fréquence la plus probable, obtenue par
+une Kernel Density Estimation (par défaut).</li>
+</ul>
+<p>On peut aussi indiquer la méthode à utiliser comme paramètre de la
+méthode .get_tonique()</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;mode&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">167.696</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">166.466</span>
+</pre></div>
+</div>
+<p>Comparons les résultats avec différents pourcentages :</p>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">pourcentages</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">toniques_mode</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">toniques_pdf</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">pourcentage</span> <span class="ow">in</span> <span class="n">pourcentages</span><span class="p">:</span>
+    <span class="n">tonique_mode</span> <span class="o">=</span> <span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">pourcentage</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;mode&quot;</span><span class="p">)</span>
+    <span class="n">toniques_mode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span><span class="p">)</span> <span class="c"># On rajoute dans la liste toniques_mode</span>
+    <span class="n">tonique_pdf</span> <span class="o">=</span> <span class="n">barraq1</span><span class="o">.</span><span class="n">get_tonique</span><span class="p">(</span><span class="n">pourcentage</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;pdf&quot;</span><span class="p">)</span>
+    <span class="n">toniques_pdf</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">barraq1</span><span class="o">.</span><span class="n">tonique</span><span class="p">)</span> <span class="c"># On rajoute dans la liste toniques_pdf</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">toniques_mode</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mf">159.201</span><span class="p">,</span> <span class="mf">167.696</span><span class="p">,</span> <span class="mf">167.696</span><span class="p">,</span> <span class="mf">163.866</span><span class="p">,</span> <span class="mf">184.999</span><span class="p">,</span> <span class="mf">184.999</span><span class="p">,</span> <span class="mf">184.999</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="code python highlight-python"><div class="highlight"><pre><span class="n">toniques_pdf</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="mf">159.466</span><span class="p">,</span> <span class="mf">166.466</span><span class="p">,</span> <span class="mf">162.871</span><span class="p">,</span> <span class="mf">163.871</span><span class="p">,</span> <span class="mf">183.871</span><span class="p">,</span> <span class="mf">182.871</span><span class="p">,</span> <span class="mf">184.871</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Nous voyons que les valeurs détectées par les deux méthodes sont
+relativement proches.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../API.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quatre_chants.html" class="btn btn-neutral" title="Quatre variantes d’un chant de femmes du sud-est tunisien" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Anas Ghrab.
+      Mis à jour le Sep 15, 2015.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

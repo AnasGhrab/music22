@@ -6,3 +6,4 @@ Tutoriels and exemples
     
     examples/barraq
     examples/quatre_chants
+    examples/tuto_tonique

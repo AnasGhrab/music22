@@ -89,7 +89,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Création de l&#8217;instance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
@@ -101,9 +101,14 @@
 <li class="toctree-l2"><a class="reference internal" href="quatre_chants.html">Quatre variantes d&#8217;un chant de femmes du sud-est tunisien</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#ecoute-des-versions">Écoute des versions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#analyse-et-affichage-des-pdf-s">Analyse et affichage des PDF-s</a></li>
-<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#transposition-des-frequences">Transposition des fréquences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#modification-des-frequences-limites">Modification des fréquences limites</a></li>
 <li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#matrice-des-distances-et-groupement-hierarchique">Matrice des distances et groupement hiérarchique</a></li>
 <li class="toctree-l3"><a class="reference internal" href="quatre_chants.html#extraction-des-echelles">Extraction des échelles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tuto_tonique.html">Quelle fréquence représenterait la tonique ?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tuto_tonique.html#les-dernieres-frequences-d-une-melodie">Les dernières fréquences d&#8217;une mélodie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tuto_tonique.html#la-frequence-tonique-parmi-les-dernieres-frequences">La fréquence tonique parmi les dernières fréquences</a></li>
 </ul>
 </li>
 </ul>
@@ -170,22 +175,17 @@ la Musique Tunisienne</em> (<a class="reference external" href="http://www.cmam.
     keywords = {Tunisie, Musique, CMAM, Snoussi}
 }
 --><hr class="docutils" />
-<p>On se propose d&#8217;analyser un chant soufi interprété par ʿAlī al-Barrāq <a class="footnote-reference" href="#id2" id="id1">[1]</a> . Son fichier
-sonore <code class="docutils literal"><span class="pre">P0.wav</span></code> se trouve dans le dossier ayant pour chemin (<em>path</em>)
-<code class="docutils literal"><span class="pre">/Users/anas/AUDIO/Barraq/</span></code>. Il est segmenté en six fichiers
-(<code class="docutils literal"><span class="pre">P1.wav</span></code>-<code class="docutils literal"><span class="pre">P6.wav</span></code>) placés également dans le même dossier.</p>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Il s&#8217;agit d&#8217;une <em>qaṣidā/ibtihāl</em> : <em>ʿomrī ʿalayka tašawwuqan qaḍḍaytuhu</em> (عمري عليك تشوّقا قضّيته).</td></tr>
-</tbody>
-</table>
-<p>Pour ce tutoriel, nous procédons comme suit :</p>
+<p>On se propose d&#8217;analyser un poème soufi (<em>qaṣidā : ʿomrī ʿalayka
+tašawwuqan qaḍḍaytuhu</em>), interprété par ʿAlī al-Barrāq. Son fichier
+sonore P0.wav se trouve dans le dossier ayant pour chemin (<em>path</em>)
+/Users/anas/AUDIO/Barraq/. il est segmenté en six fichiers
+(P1.wav-P6.wav) placés également dans le même dossier.</p>
+<p>Nous procédons comme suit :</p>
 <ul class="simple">
-<li>Présentation des commandes préliminaires;</li>
-<li>Écoute des des phrases segmentées;</li>
-<li>Présentation des commandes pour l&#8217;analyse d&#8217;une seule mélodie (la première phrase);</li>
-<li>Présentation des commandes pour l&#8217;analyse et la comparaison de plusieurs phrases (les
+<li>Commandes préliminaires</li>
+<li>Écoute des des phrases segmentées</li>
+<li>Commandes pour l&#8217;analyse d&#8217;une seule mélodie (la première phrase)</li>
+<li>Commandes pour l&#8217;analyse et la comparaison de plusieurs phrases (les
 six phrases qui composent l&#8217;extrait)</li>
 </ul>
 <div class="section" id="importation-du-module-modalis">
@@ -239,8 +239,8 @@ src='http://phonotheque.cmam.tn/archives/items/barraq_ibtihal_06/player/800x170'
 <h3>Création de l&#8217;instance<a class="headerlink" href="#creation-de-l-instance" title="Lien permanent vers ce titre">¶</a></h3>
 <p>On procèdera premièrement par la création d&#8217;une instance (« objet ») que
 nous nommons <em>barraq</em>. La création de l&#8217;instance se fait en indiquant le
-<em>path</em> du fichier à la classe <a class="reference internal" href="../modalis.html#music22.modalis.melodia" title="music22.modalis.melodia"><code class="xref py py-class docutils literal"><span class="pre">music22.modalis.melodia</span></code></a> du module <a class="reference internal" href="../modalis.html#module-music22.modalis" title="music22.modalis"><code class="xref py py-mod docutils literal"><span class="pre">music22.modalis</span></code></a> du package
-<cite>music22</cite>.</p>
+<em>path</em> du fichier à la classe <em>melodia</em> du module <em>modalis</em> du package
+<em>music22</em>.</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/Barraq/P1.wav&quot;</span>
 <span class="n">barraq</span> <span class="o">=</span> <span class="n">music22</span><span class="o">.</span><span class="n">modalis</span><span class="o">.</span><span class="n">melodia</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
@@ -279,7 +279,7 @@ l&#8217;instance :</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">tonique</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="mf">166.46600000000001</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="mf">166.466</span>
 </pre></div>
 </div>
 <p>Pour plus de détails concernant l&#8217;analyse de la tonique, voir : ...</p>
@@ -342,14 +342,14 @@ d&#8217;appeler l&#8217;attribut <em>.scale</em></p>
 <span class="n">barraq</span><span class="o">.</span><span class="n">scale</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;243.486973948&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;165.15&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;10.94&#39;</span><span class="p">)),</span>
- <span class="p">(</span><span class="s">&#39;201.402805611&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;82.74&#39;</span><span class="p">,</span> <span class="s">&#39;6/5&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;3.56&#39;</span><span class="p">)),</span>
- <span class="p">(</span><span class="s">&#39;324.649298597&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;290.09&#39;</span><span class="p">,</span> <span class="s">&#39;2/1&#39;</span><span class="p">,</span> <span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="s">&#39;10.94&#39;</span><span class="p">)),</span>
- <span class="p">(</span><span class="s">&#39;278.557114228&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;223.59&#39;</span><span class="p">,</span> <span class="s">&#39;3/2*10/9&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;1.74&#39;</span><span class="p">)),</span>
- <span class="p">(</span><span class="s">&#39;375.751503006&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;353.58&#39;</span><span class="p">,</span> <span class="s">&#39;2/1*9/8&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;1.39&#39;</span><span class="p">))]</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[(</span><span class="s">&#39;243.486973948&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;658.34&#39;</span><span class="p">,</span> <span class="s">&#39;3/2&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;43.61&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;201.402805611&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;329.83&#39;</span><span class="p">,</span> <span class="s">&#39;6/5&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;14.19&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;324.649298597&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;1156.39&#39;</span><span class="p">,</span> <span class="s">&#39;2/1&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;43.61&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;278.557114228&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;891.29&#39;</span><span class="p">,</span> <span class="s">&#39;3/2*10/9&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;6.94&#39;</span><span class="p">)),</span>
+ <span class="p">(</span><span class="s">&#39;375.751503006&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;1409.46&#39;</span><span class="p">,</span> <span class="s">&#39;2/1*9/8&#39;</span><span class="p">,</span> <span class="s">&#39;+&#39;</span><span class="p">,</span> <span class="s">&#39;5.55&#39;</span><span class="p">))]</span>
 </pre></div>
 </div>
-<p>(BUG à corriger : en <em>cent</em> les signes + et moins - ne sont pas pris en
+<p>(BUG à corriger : en <em>cent</em> les signes + et - ne sont pas pris en
 considération).</p>
 </div>
 <div class="section" id="dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">
@@ -370,10 +370,10 @@ des pics intervalliques et l&#8217;échelle, il suffit de fait de nouveau appel
 </div>
 <div class="section" id="analyse-et-comparaison-d-un-ensemble-de-melodies">
 <h2>Analyse et comparaison d&#8217;un ensemble de mélodies<a class="headerlink" href="#analyse-et-comparaison-d-un-ensemble-de-melodies" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="id3">
-<h3>Création de l&#8217;instance<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="id1">
+<h3>Création de l&#8217;instance<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La gestion de plusieurs mélodies/phrases s&#8217;effectue à travers la classe
-<a class="reference internal" href="../modalis.html#music22.modalis.melodies" title="music22.modalis.melodies"><code class="xref py py-class docutils literal"><span class="pre">music22.modalis.melodies</span></code></a> du module <a class="reference internal" href="../modalis.html#module-music22.modalis" title="music22.modalis"><code class="xref py py-mod docutils literal"><span class="pre">music22.modalis</span></code></a>.</p>
+<em>melodies</em> du module <em>modalis</em>.</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/Barraq/&quot;</span>
 <span class="n">Barraq</span> <span class="o">=</span> <span class="n">music22</span><span class="o">.</span><span class="n">modalis</span><span class="o">.</span><span class="n">melodies</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c"># Création de l&#39;instance _melodies_ du module modalis</span>
 </pre></div>
@@ -486,7 +486,7 @@ caractétistiques proches de l&#8217;ensemble du fichier (P0) est la phrase P2.<
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Anas Ghrab.
-      Mis à jour le Sep 13, 2015.
+      Mis à jour le Sep 15, 2015.
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
