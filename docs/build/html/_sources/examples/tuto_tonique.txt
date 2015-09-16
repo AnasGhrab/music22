@@ -1,3 +1,4 @@
+.. _tuto_tonique:
 
 Quelle fréquence représenterait la tonique ?
 ============================================

@@ -89,7 +89,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#analyse-et-comparaison-d-un-ensemble-de-melodies">Analyse et comparaison d&#8217;un ensemble de mélodies</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Création de l&#8217;instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Création de l&#8217;instance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#affichage-des-courbes-pdf-s">Affichage des courbes PDF-s</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#obtenir-l-echelle-d-une-melodie">Obtenir l&#8217;échelle d&#8217;une mélodie</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dessiner-une-ligne-melodie-avec-l-echelle-calculee">Dessiner une ligne mélodie avec l&#8217;échelle calculée</a></li>
@@ -175,18 +175,19 @@ la Musique Tunisienne</em> (<a class="reference external" href="http://www.cmam.
     keywords = {Tunisie, Musique, CMAM, Snoussi}
 }
 --><hr class="docutils" />
-<p>On se propose d&#8217;analyser un poème soufi (<em>qaṣidā : ʿomrī ʿalayka
-tašawwuqan qaḍḍaytuhu</em>), interprété par ʿAlī al-Barrāq. Son fichier
-sonore P0.wav se trouve dans le dossier ayant pour chemin (<em>path</em>)
-/Users/anas/AUDIO/Barraq/. il est segmenté en six fichiers
-(P1.wav-P6.wav) placés également dans le même dossier.</p>
-<p>Nous procédons comme suit :</p>
+<p>On se propose d&#8217;analyser un chant soufi interprété par ʿAlī al-Barrāq <a class="footnote-reference" href="#id2" id="id1">[1]</a> . Son fichier sonore <code class="docutils literal"><span class="pre">P0.wav</span></code> se trouve dans le dossier ayant pour chemin (<em>path</em>) <code class="docutils literal"><span class="pre">/Users/anas/AUDIO/Barraq/</span></code>. Il est segmenté en six fichiers (<code class="docutils literal"><span class="pre">P1.wav</span></code>-<code class="docutils literal"><span class="pre">P6.wav</span></code>) placés également dans le même dossier.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Il s&#8217;agit d&#8217;une <em>qaṣidā/ibtihāl</em> : <em>ʿomrī ʿalayka tašawwuqan qaḍḍaytuhu</em> (عمري عليك تشوّقا قضّيته).</td></tr>
+</tbody>
+</table>
+<p>Pour ce tutoriel, nous procédons comme suit :</p>
 <ul class="simple">
-<li>Commandes préliminaires</li>
-<li>Écoute des des phrases segmentées</li>
-<li>Commandes pour l&#8217;analyse d&#8217;une seule mélodie (la première phrase)</li>
-<li>Commandes pour l&#8217;analyse et la comparaison de plusieurs phrases (les
-six phrases qui composent l&#8217;extrait)</li>
+<li>Présentation des commandes préliminaires;</li>
+<li>Écoute des des phrases segmentées;</li>
+<li>Présentation des commandes pour l&#8217;analyse d&#8217;une seule mélodie (la première phrase);</li>
+<li>Présentation des commandes pour l&#8217;analyse et la comparaison de plusieurs phrases (les six phrases qui composent l&#8217;extrait)</li>
 </ul>
 <div class="section" id="importation-du-module-modalis">
 <h2>Importation du module <em>modalis</em><a class="headerlink" href="#importation-du-module-modalis" title="Lien permanent vers ce titre">¶</a></h2>
@@ -256,7 +257,7 @@ et les enregistre dans un fichier .txt.</p>
 <div class="section" id="parametres-melodiques-principaux">
 <h3>Paramètres mélodiques principaux<a class="headerlink" href="#parametres-melodiques-principaux" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Avec la création de l&#8217;instance, certaines données sont automatiques
-analysées. On peut les obtenir en faisant appels aux attributs de
+analysées. On peut les obtenir en faisant appel aux attributs de
 l&#8217;instance :</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">xmin</span> <span class="c"># la fréquence minimale, en Hertz</span>
 </pre></div>
@@ -282,11 +283,11 @@ l&#8217;instance :</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="mf">166.466</span>
 </pre></div>
 </div>
-<p>Pour plus de détails concernant l&#8217;analyse de la tonique, voir : ...</p>
+<p>Pour plus de détails concernant l&#8217;analyse de la tonique, <a class="reference internal" href="tuto_tonique.html#tuto-tonique"><span>voir le présentation de la détection de la tonique</span></a>.</p>
 </div>
 <div class="section" id="dessiner-la-courbe-melodique">
 <h3>Dessiner la courbe mélodique<a class="headerlink" href="#dessiner-la-courbe-melodique" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Pour afficher la courbe mélodique, on peut utilise la méthode .plot().
+<p>Pour afficher la courbe mélodique, on peut utiliser la méthode .plot().
 La tonique détectée est automatiquement affichée. On peut juger
 visuellement de la pertinance de la tonique détectée.</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span> <span class="c"># Les paranthèses sont nécessaires</span>
@@ -318,10 +319,10 @@ visuellement de la pertinance de la tonique détectée.</p>
 </pre></div>
 </div>
 <p>Les fréquences sont indiquées par ordre d&#8217;importance (première colonne).
-Ensuite sont indiquées : 1. les intervalles que forment ces fréquences
-avec la tonique détectée (par défaut, en savart); 2. les intervalles
-épimoriques les plus proches de cet intervalles, 3. sont-ils plus grand
-ou plus petit que l&#8217;intervalle épimorique le plus proche ?; 4. La
+Ensuite sont indiquées : 1. l&#8217;intervalles que forme ces fréquences
+avec la tonique détectée (par défaut, en savart); 2. l&#8217;intervalle
+épimoriques le plus proche de cet intervalles, 3. est-il plus grand
+ou plus petit que l&#8217;intervalle épimorique le plus proche ?; 4. la
 distance qui les sépare (par défaut, en savart).</p>
 <p>Par exemple, dans cette phrase, la fréquence la plus <em>probable</em> est la
 fréquence 243 Hz. Elle forme avec la tonique l&#8217;intervalle 165.15
@@ -336,7 +337,7 @@ de mesure en faisant appel au module <em>diastema</em> :</p>
 <div class="highlight-python"><div class="highlight"><pre>Unit is now set to : cent
 </pre></div>
 </div>
-<p>Puis calculer l&#8217;échelle de nouveau avec la méthode <em>get_scale()</em>, avant
+<p>Il est nécessaire de calculer de nouveau l&#8217;échelle avec la méthode <em>get_scale()</em>, avant
 d&#8217;appeler l&#8217;attribut <em>.scale</em></p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">barraq</span><span class="o">.</span><span class="n">get_scale</span><span class="p">()</span>
 <span class="n">barraq</span><span class="o">.</span><span class="n">scale</span>
@@ -354,8 +355,8 @@ considération).</p>
 </div>
 <div class="section" id="dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules">
 <h3>Dessiner la courbe mélodique en intégrant les intervalles calculés<a class="headerlink" href="#dessiner-la-courbe-melodique-en-integrant-les-intervalles-calcules" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Pour dessiner la courbe mélodique en prenant en considération le calcule
-des pics intervalliques et l&#8217;échelle, il suffit de fait de nouveau appel
+<p>Pour dessiner la courbe mélodique en prenant en considération le calcul
+des pics intervalliques et l&#8217;échelle, il suffit de faire de nouveau appel
 à la méthode <em>.plot()</em> en indiquant l&#8217;argument <em>peaks=&#8221;Yes&#8221;</em> :</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">music22</span><span class="o">.</span><span class="n">diastema</span><span class="o">.</span><span class="n">set_unit</span><span class="p">(</span><span class="s">&#39;savart&#39;</span><span class="p">)</span>
 <span class="n">barraq</span><span class="o">.</span><span class="n">get_scale</span><span class="p">()</span>
@@ -370,8 +371,8 @@ des pics intervalliques et l&#8217;échelle, il suffit de fait de nouveau appel
 </div>
 <div class="section" id="analyse-et-comparaison-d-un-ensemble-de-melodies">
 <h2>Analyse et comparaison d&#8217;un ensemble de mélodies<a class="headerlink" href="#analyse-et-comparaison-d-un-ensemble-de-melodies" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="id1">
-<h3>Création de l&#8217;instance<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="id3">
+<h3>Création de l&#8217;instance<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La gestion de plusieurs mélodies/phrases s&#8217;effectue à travers la classe
 <em>melodies</em> du module <em>modalis</em>.</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">path</span> <span class="o">=</span> <span class="s">&quot;/Users/anas/AUDIO/Barraq/&quot;</span>
@@ -454,8 +455,8 @@ dans un dossier f0 créé dans le dossier principal.</p>
 </div>
 <div class="section" id="matrice-des-distances-classement-hierarchique">
 <h3>Matrice des distances / classement hiérarchique<a class="headerlink" href="#matrice-des-distances-classement-hierarchique" title="Lien permanent vers ce titre">¶</a></h3>
-<p>La méthode <em>.matrix()</em> donne la matice des similarités et le classement
-hiérarchique :</p>
+<p>La méthode <em>.matrix()</em> donne la <a class="reference external" href="https://fr.wikipedia.org/wiki/Matrice_de_similarit%C3%A9">matice des similarités</a>, le <a class="reference external" href="https://fr.wikipedia.org/wiki/Regroupement_hi%C3%A9rarchique">classement
+hiérarchique et le dendogramme</a> :</p>
 <div class="code python highlight-python"><div class="highlight"><pre><span class="n">Barraq</span><span class="o">.</span><span class="n">matrix</span><span class="p">()</span>
 </pre></div>
 </div>

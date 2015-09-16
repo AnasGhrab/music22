@@ -32,19 +32,16 @@ la Musique Tunisienne* (`Snoussi, 1963/R-2003 <http://www.cmam.tn/publication/fr
 
 --------------
 
-On se propose d'analyser un poème soufi (*qaṣidā : ʿomrī ʿalayka
-tašawwuqan qaḍḍaytuhu*), interprété par ʿAlī al-Barrāq. Son fichier
-sonore P0.wav se trouve dans le dossier ayant pour chemin (*path*)
-/Users/anas/AUDIO/Barraq/. il est segmenté en six fichiers
-(P1.wav-P6.wav) placés également dans le même dossier.
+On se propose d'analyser un chant soufi interprété par ʿAlī al-Barrāq [#]_ . Son fichier sonore ``P0.wav`` se trouve dans le dossier ayant pour chemin (*path*) ``/Users/anas/AUDIO/Barraq/``. Il est segmenté en six fichiers (``P1.wav``-``P6.wav``) placés également dans le même dossier.
 
-Nous procédons comme suit :
+.. [#] Il s'agit d'une *qaṣidā/ibtihāl* : *ʿomrī ʿalayka tašawwuqan qaḍḍaytuhu* (عمري عليك تشوّقا قضّيته). 
 
--  Commandes préliminaires
--  Écoute des des phrases segmentées
--  Commandes pour l'analyse d'une seule mélodie (la première phrase)
--  Commandes pour l'analyse et la comparaison de plusieurs phrases (les
-   six phrases qui composent l'extrait)
+Pour ce tutoriel, nous procédons comme suit :
+
+- Présentation des commandes préliminaires;
+- Écoute des des phrases segmentées;
+-  Présentation des commandes pour l'analyse d'une seule mélodie (la première phrase);
+-  Présentation des commandes pour l'analyse et la comparaison de plusieurs phrases (les six phrases qui composent l'extrait)
 
 Importation du module *modalis*
 -------------------------------
@@ -311,7 +308,7 @@ Paramètres mélodiques principaux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Avec la création de l'instance, certaines données sont automatiques
-analysées. On peut les obtenir en faisant appels aux attributs de
+analysées. On peut les obtenir en faisant appel aux attributs de
 l'instance :
 
 .. code:: python
@@ -365,13 +362,12 @@ l'instance :
     166.466
 
 
-
-Pour plus de détails concernant l'analyse de la tonique, voir : ...
+Pour plus de détails concernant l'analyse de la tonique, :ref:`voir le présentation de la détection de la tonique <tuto_tonique>`.
 
 Dessiner la courbe mélodique
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pour afficher la courbe mélodique, on peut utilise la méthode .plot().
+Pour afficher la courbe mélodique, on peut utiliser la méthode .plot().
 La tonique détectée est automatiquement affichée. On peut juger
 visuellement de la pertinance de la tonique détectée.
 
@@ -424,10 +420,10 @@ Les données de l'échelle sont stockées dans l'attribut *.scale*.
 
 
 Les fréquences sont indiquées par ordre d'importance (première colonne).
-Ensuite sont indiquées : 1. les intervalles que forment ces fréquences
-avec la tonique détectée (par défaut, en savart); 2. les intervalles
-épimoriques les plus proches de cet intervalles, 3. sont-ils plus grand
-ou plus petit que l'intervalle épimorique le plus proche ?; 4. La
+Ensuite sont indiquées : 1. l'intervalles que forme ces fréquences
+avec la tonique détectée (par défaut, en savart); 2. l'intervalle
+épimoriques le plus proche de cet intervalles, 3. est-il plus grand
+ou plus petit que l'intervalle épimorique le plus proche ?; 4. la
 distance qui les sépare (par défaut, en savart).
 
 Par exemple, dans cette phrase, la fréquence la plus *probable* est la
@@ -449,7 +445,7 @@ de mesure en faisant appel au module *diastema* :
     Unit is now set to : cent
 
 
-Puis calculer l'échelle de nouveau avec la méthode *get\_scale()*, avant
+Il est nécessaire de calculer de nouveau l'échelle avec la méthode *get\_scale()*, avant
 d'appeler l'attribut *.scale*
 
 .. code:: python
@@ -476,8 +472,8 @@ considération).
 Dessiner la courbe mélodique en intégrant les intervalles calculés
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Pour dessiner la courbe mélodique en prenant en considération le calcule
-des pics intervalliques et l'échelle, il suffit de fait de nouveau appel
+Pour dessiner la courbe mélodique en prenant en considération le calcul
+des pics intervalliques et l'échelle, il suffit de faire de nouveau appel
 à la méthode *.plot()* en indiquant l'argument *peaks="Yes"* :
 
 .. code:: python
@@ -612,8 +608,10 @@ et afficher sa courbe mélodique :
 Matrice des distances / classement hiérarchique
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-La méthode *.matrix()* donne la matice des similarités et le classement
-hiérarchique :
+La méthode *.matrix()* donne la `matice des similarités <https://fr.wikipedia.org/wiki/Matrice_de_similarit%C3%A9>`_, le `classement
+hiérarchique et le dendogramme <https://fr.wikipedia.org/wiki/Regroupement_hi%C3%A9rarchique>`_ :
+
+
 
 .. code:: python
 
