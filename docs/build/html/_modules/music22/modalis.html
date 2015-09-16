@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>music22.modalis &mdash; documentation music22 0.0.2</title>
+  <title>music22.modalis &mdash; documentation music22 0.0.2.post2</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="documentation music22 0.0.2" href="../../index.html"/>
+    <link rel="top" title="documentation music22 0.0.2.post2" href="../../index.html"/>
         <link rel="up" title="Code du module" href="../index.html"/> 
 
   
@@ -400,10 +400,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">tonique</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tonique_pdf</span><span class="p">(</span><span class="n">Final_Freqs</span><span class="p">)</span>
         
         <span class="c">#print &#39;The detected tonic is&#39;, self.tonique, &#39;Hz.&#39;</span>
+        </div>
+    <span class="k">def</span> <span class="nf">_tonique_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">Final_Freqs</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">scipy.stats.mstats</span> <span class="kn">import</span> <span class="n">mode</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">mode</span><span class="p">(</span><span class="n">Final_Freqs</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
         
-    <span class="c">#def _tonique_mode(Final_Freqs):</span>
-        <span class="c">#from scipy.stats.mstats import mode</span>
-</div>
     <span class="k">def</span> <span class="nf">_tonique_pdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">Final_Freqs</span><span class="p">):</span>
         <span class="kn">from</span> <span class="nn">scipy.stats.kde</span> <span class="kn">import</span> <span class="n">gaussian_kde</span>
     
@@ -415,7 +416,7 @@
         <span class="n">y</span> <span class="o">=</span> <span class="n">final_pdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="n">pdfmax</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">final_pdf</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
         <span class="n">lmax</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">pdfmax</span><span class="p">]</span>
-        <span class="k">return</span> <span class="n">lmax</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%0.3f</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">lmax</span><span class="p">)</span>
     </div>
 <div class="viewcode-block" id="transmode"><a class="viewcode-back" href="../../modalis.html#music22.modalis.transmode">[docs]</a><span class="k">def</span> <span class="nf">transmode</span><span class="p">(</span><span class="n">freqlist</span><span class="p">,</span><span class="n">freqref</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
      <span class="sd">&quot;&quot;&quot;Transpose all the frequencies by setting the _mode_ on a given reference frequency.</span>
@@ -444,7 +445,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, Anas Ghrab.
-      Mis à jour le Sep 15, 2015.
+      Mis à jour le Sep 16, 2015.
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
@@ -465,7 +466,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.0.2',
+            VERSION:'0.0.2.post2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
