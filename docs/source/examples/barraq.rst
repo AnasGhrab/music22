@@ -362,7 +362,7 @@ l'instance :
     166.466
 
 
-Pour plus de détails concernant l'analyse de la tonique, :ref:`voir le présentation de la détection de la tonique <tuto_tonique>`.
+Pour plus de détails concernant l'analyse de la tonique, :ref:`voir la présentation de la détection de la tonique <tuto_tonique>`.
 
 Dessiner la courbe mélodique
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
