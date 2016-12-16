@@ -22,7 +22,8 @@ def pitch_extract(file,minFrequency=80,maxFrequency=600):
         file (str): the path of the .txt file where frequencies were written. Zeros pitches are replaced by NaN values.
     """
     audio = MonoLoader(filename = file)() # creation de l'instance
-    melodie = PredominantMelody(minFrequency=minFrequency, maxFrequency = maxFrequency) # creation de l'instance
+#    melodie = PredominantMelody(minFrequency=minFrequency, maxFrequency = maxFrequency) # creation de l'instance
+    melodie = PitchMelodia(minFrequency=minFrequency, maxFrequency = maxFrequency) # creation de l'instance
     pitch, confidence = melodie(audio)
 
     return pitch

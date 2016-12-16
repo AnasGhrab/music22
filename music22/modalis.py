@@ -237,9 +237,11 @@ class melodia(object):
         self.percent = percent
         self.method = method
 
-        L = len(self.clean_freqs)
+        F = self.freqs
+	Fc = F[~numpy.isnan(F)]
+	L = len(Fc)
         Nb_Frames = L*self.percent/100
-        Final_Freqs = self.clean_freqs[(L-Nb_Frames):L]
+        Final_Freqs = self.Fc[(L-Nb_Frames):L]
         self.final_freqs = Final_Freqs
 
         if method=='mode':

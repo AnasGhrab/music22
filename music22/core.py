@@ -35,8 +35,11 @@ class file():
         >>> print A.extension
         wav
     """
-    def __init__(self,path):
-        self.path = path
+    def __init__(self,fichier):
+        #self.path = path.abspath('\''+ path + '\'' )
+        #self.path = fichier
+        self.path = path.abspath(fichier)
+	print "Fichier :", self.path
         self._check_exist()
         self._set_names()
     def __repr__(self):
@@ -108,6 +111,7 @@ class f0file(file):
             print "ERROR: The file does not seem to be a text .txt file !"
 
     def get_data(self):
+        print "Recherche f0 dans",self.path
         self.data = numpy.loadtxt(self.path)
 
     def clean_data(self):
